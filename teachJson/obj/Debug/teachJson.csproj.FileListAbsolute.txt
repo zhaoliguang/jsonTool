@@ -1,0 +1,26 @@
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\bin\Debug\teachJson.exe.config
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\bin\Debug\teachJson.exe
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\bin\Debug\teachJson.pdb
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\obj\Debug\teachJson.csprojResolveAssemblyReference.cache
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\obj\Debug\teachJson.Form1.resources
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\obj\Debug\teachJson.Properties.Resources.resources
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\obj\Debug\teachJson.csproj.GenerateResource.Cache
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\obj\Debug\teachJson.exe
+c:\users\xudawen\documents\visual studio 2013\Projects\teachJson\teachJson\obj\Debug\teachJson.pdb
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\teachJson.exe.config
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\teachJson.exe
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\teachJson.pdb
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\System.Data.SQLite.dll
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\System.Data.SQLite.pdb
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\System.Data.SQLite.xml
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.Form1.resources
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.Form2.resources
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.Properties.Resources.resources
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.csproj.GenerateResource.Cache
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.exe
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.pdb
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\x64\SQLite.Interop.dll
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Debug\x86\SQLite.Interop.dll
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.csprojResolveAssemblyReference.cache
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Debug\teachJson.UserControl1.resources

@@ -1,0 +1,12 @@
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\x86\Debug\teachJson.exe.config
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\x86\Debug\teachJson.exe
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\x86\Debug\teachJson.pdb
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\x86\Debug\teachJson.Form1.resources
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\x86\Debug\teachJson.Form2.resources
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\x86\Debug\teachJson.Properties.Resources.resources
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\x86\Debug\teachJson.csproj.GenerateResource.Cache
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\x86\Debug\teachJson.exe
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\x86\Debug\teachJson.pdb
+C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\x86\Debug\teachJson.csprojResolveAssemblyReference.cache
