@@ -7,7 +7,6 @@ C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Release\Newtonsoft.Json.dll
 C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Release\System.Data.SQLite.dll
 C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Release\System.Data.SQLite.pdb
 C:\Users\pizzaa\Desktop\teachJson\teachJson\bin\Release\System.Data.SQLite.xml
-C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Release\teachJson.csprojResolveAssemblyReference.cache
 C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Release\teachJson.Form1.resources
 C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Release\teachJson.Form2.resources
 C:\Users\pizzaa\Desktop\teachJson\teachJson\obj\Release\teachJson.Properties.Resources.resources

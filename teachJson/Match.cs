@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace teachJson
 {
-   public class Match
+    public class Match : Base
     {
         private String questionType;
         private String speech;

@@ -91,6 +91,42 @@ namespace teachJson
                 count = int.Parse(dtCount.Rows[0][0].ToString());
                 return count;
             }
+            public int GetLessonTrailCount(string lessonName,string trialName)
+            {
+                string strSql = "select count(*) from lessontrail where lessonName = " + "'" + lessonName + "'" + " and chineseName = " + "'" + trialName + "'";
+                int count = 0;
+                DataTable dtCount = GetDataTable(strSql);
+                count = int.Parse(dtCount.Rows[0][0].ToString());
+                return count;
+            }
+            public string RunSelectSQL(string sql)
+            {
+              
+                try
+                {
+                    conn = GetCon();
+                    conn.Open();
+                    cmd = new SQLiteCommand(sql, conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            return reader.GetString(0);
+                          
+                        }
+                    } 
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                return "";
+            }
         }
 
 

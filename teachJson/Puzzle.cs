@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace teachJson
 {
-   public class Puzzle
+    public class Puzzle : Base
     {
          private String questionType;
         private String speech;

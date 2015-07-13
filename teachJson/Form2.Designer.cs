@@ -31,12 +31,8 @@
             this.label34 = new System.Windows.Forms.Label();
             this.trailChineseName = new System.Windows.Forms.TextBox();
             this.lessonName = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.trailName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl0 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label = new System.Windows.Forms.Label();
             this.tabcontrol0learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -89,6 +85,8 @@
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label583 = new System.Windows.Forms.Label();
+            this.label584 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabcontrol0ChoiceSound = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -123,10 +121,32 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabcontrol7JudgeWrongImagepanel1 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
+            this.button144 = new System.Windows.Forms.Button();
+            this.button143 = new System.Windows.Forms.Button();
             this.button142 = new System.Windows.Forms.Button();
-            this.tabControl14 = new System.Windows.Forms.TabControl();
+            this.tabControl13 = new System.Windows.Forms.TabControl();
+            this.tabPage82 = new System.Windows.Forms.TabPage();
+            this.label569 = new System.Windows.Forms.Label();
+            this.label594 = new System.Windows.Forms.Label();
+            this.label562 = new System.Windows.Forms.Label();
+            this.tabcontrol13ChoiceSound = new System.Windows.Forms.TextBox();
+            this.label563 = new System.Windows.Forms.Label();
+            this.label564 = new System.Windows.Forms.Label();
+            this.tabcontrol13ChoiceExciseName = new System.Windows.Forms.TextBox();
+            this.tabcontrol13ChoiceQuestionType = new System.Windows.Forms.ComboBox();
+            this.label565 = new System.Windows.Forms.Label();
+            this.button138 = new System.Windows.Forms.Button();
+            this.button139 = new System.Windows.Forms.Button();
+            this.label566 = new System.Windows.Forms.Label();
+            this.tabcontrol13ChoiceDistraText = new System.Windows.Forms.TextBox();
+            this.tabcontrol13ChoiceRightImage = new System.Windows.Forms.TextBox();
+            this.label567 = new System.Windows.Forms.Label();
+            this.label568 = new System.Windows.Forms.Label();
+            this.tabcontrol13ChoiceRightText = new System.Windows.Forms.TextBox();
+            this.tabcontrol13ChoiceDistraImage = new System.Windows.Forms.TextBox();
+            this.label570 = new System.Windows.Forms.Label();
+            this.label571 = new System.Windows.Forms.Label();
             this.tabPage79 = new System.Windows.Forms.TabPage();
             this.label537 = new System.Windows.Forms.Label();
             this.tabcontrol13learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -178,25 +198,6 @@
             this.tabcontrol13MatchDistraImage = new System.Windows.Forms.TextBox();
             this.label560 = new System.Windows.Forms.Label();
             this.label561 = new System.Windows.Forms.Label();
-            this.tabPage82 = new System.Windows.Forms.TabPage();
-            this.label562 = new System.Windows.Forms.Label();
-            this.tabcontrol13ChoiceSound = new System.Windows.Forms.TextBox();
-            this.label563 = new System.Windows.Forms.Label();
-            this.label564 = new System.Windows.Forms.Label();
-            this.tabcontrol13ChoiceExciseName = new System.Windows.Forms.TextBox();
-            this.tabcontrol13ChoiceQuestionType = new System.Windows.Forms.ComboBox();
-            this.label565 = new System.Windows.Forms.Label();
-            this.button138 = new System.Windows.Forms.Button();
-            this.button139 = new System.Windows.Forms.Button();
-            this.label566 = new System.Windows.Forms.Label();
-            this.tabcontrol13ChoiceDistraText = new System.Windows.Forms.TextBox();
-            this.tabcontrol13ChoiceRightImage = new System.Windows.Forms.TextBox();
-            this.label567 = new System.Windows.Forms.Label();
-            this.label568 = new System.Windows.Forms.Label();
-            this.tabcontrol13ChoiceRightText = new System.Windows.Forms.TextBox();
-            this.tabcontrol13ChoiceDistraImage = new System.Windows.Forms.TextBox();
-            this.label570 = new System.Windows.Forms.Label();
-            this.label571 = new System.Windows.Forms.Label();
             this.tabPage83 = new System.Windows.Forms.TabPage();
             this.button140 = new System.Windows.Forms.Button();
             this.label575 = new System.Windows.Forms.Label();
@@ -213,7 +214,7 @@
             this.tabPage84 = new System.Windows.Forms.TabPage();
             this.comboBox79 = new System.Windows.Forms.ComboBox();
             this.label577 = new System.Windows.Forms.Label();
-            this.tabControl13 = new System.Windows.Forms.TabControl();
+            this.tabControl12 = new System.Windows.Forms.TabControl();
             this.tabPage73 = new System.Windows.Forms.TabPage();
             this.label496 = new System.Windows.Forms.Label();
             this.tabcontrol12learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -266,6 +267,8 @@
             this.label519 = new System.Windows.Forms.Label();
             this.label520 = new System.Windows.Forms.Label();
             this.tabPage76 = new System.Windows.Forms.TabPage();
+            this.label528 = new System.Windows.Forms.Label();
+            this.label593 = new System.Windows.Forms.Label();
             this.label521 = new System.Windows.Forms.Label();
             this.tabcontrol12ChoiceSound = new System.Windows.Forms.TextBox();
             this.label522 = new System.Windows.Forms.Label();
@@ -300,7 +303,7 @@
             this.tabPage78 = new System.Windows.Forms.TabPage();
             this.comboBox73 = new System.Windows.Forms.ComboBox();
             this.label536 = new System.Windows.Forms.Label();
-            this.tabControl12 = new System.Windows.Forms.TabControl();
+            this.tabControl11 = new System.Windows.Forms.TabControl();
             this.tabPage67 = new System.Windows.Forms.TabPage();
             this.label455 = new System.Windows.Forms.Label();
             this.tabcontrol11learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -353,6 +356,8 @@
             this.label478 = new System.Windows.Forms.Label();
             this.label479 = new System.Windows.Forms.Label();
             this.tabPage70 = new System.Windows.Forms.TabPage();
+            this.label487 = new System.Windows.Forms.Label();
+            this.label582 = new System.Windows.Forms.Label();
             this.label480 = new System.Windows.Forms.Label();
             this.tabcontrol11ChoiceSound = new System.Windows.Forms.TextBox();
             this.label481 = new System.Windows.Forms.Label();
@@ -387,7 +392,7 @@
             this.tabPage72 = new System.Windows.Forms.TabPage();
             this.comboBox67 = new System.Windows.Forms.ComboBox();
             this.label495 = new System.Windows.Forms.Label();
-            this.tabControl8 = new System.Windows.Forms.TabControl();
+            this.tabControl7 = new System.Windows.Forms.TabControl();
             this.tabPage43 = new System.Windows.Forms.TabPage();
             this.label291 = new System.Windows.Forms.Label();
             this.tabcontrol7learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -440,6 +445,8 @@
             this.label314 = new System.Windows.Forms.Label();
             this.label315 = new System.Windows.Forms.Label();
             this.tabPage46 = new System.Windows.Forms.TabPage();
+            this.label591 = new System.Windows.Forms.Label();
+            this.label592 = new System.Windows.Forms.Label();
             this.label316 = new System.Windows.Forms.Label();
             this.tabcontrol7ChoiceSound = new System.Windows.Forms.TextBox();
             this.label317 = new System.Windows.Forms.Label();
@@ -475,7 +482,7 @@
             this.tabPage48 = new System.Windows.Forms.TabPage();
             this.comboBox43 = new System.Windows.Forms.ComboBox();
             this.label331 = new System.Windows.Forms.Label();
-            this.tabControl11 = new System.Windows.Forms.TabControl();
+            this.tabControl10 = new System.Windows.Forms.TabControl();
             this.tabPage61 = new System.Windows.Forms.TabPage();
             this.label414 = new System.Windows.Forms.Label();
             this.tabcontrol10learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -528,6 +535,8 @@
             this.label437 = new System.Windows.Forms.Label();
             this.label438 = new System.Windows.Forms.Label();
             this.tabPage64 = new System.Windows.Forms.TabPage();
+            this.label446 = new System.Windows.Forms.Label();
+            this.label581 = new System.Windows.Forms.Label();
             this.label439 = new System.Windows.Forms.Label();
             this.tabcontrol10ChoiceSound = new System.Windows.Forms.TextBox();
             this.label440 = new System.Windows.Forms.Label();
@@ -562,7 +571,7 @@
             this.tabPage66 = new System.Windows.Forms.TabPage();
             this.comboBox61 = new System.Windows.Forms.ComboBox();
             this.label454 = new System.Windows.Forms.Label();
-            this.tabControl7 = new System.Windows.Forms.TabControl();
+            this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.label250 = new System.Windows.Forms.Label();
             this.tabcontrol6learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -615,6 +624,8 @@
             this.label273 = new System.Windows.Forms.Label();
             this.label274 = new System.Windows.Forms.Label();
             this.tabPage40 = new System.Windows.Forms.TabPage();
+            this.label589 = new System.Windows.Forms.Label();
+            this.label590 = new System.Windows.Forms.Label();
             this.label275 = new System.Windows.Forms.Label();
             this.tabcontrol6ChoiceSound = new System.Windows.Forms.TextBox();
             this.label276 = new System.Windows.Forms.Label();
@@ -650,7 +661,7 @@
             this.tabPage42 = new System.Windows.Forms.TabPage();
             this.comboBox37 = new System.Windows.Forms.ComboBox();
             this.label290 = new System.Windows.Forms.Label();
-            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage31 = new System.Windows.Forms.TabPage();
             this.label209 = new System.Windows.Forms.Label();
             this.tabcontrol5learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -703,6 +714,8 @@
             this.label232 = new System.Windows.Forms.Label();
             this.label233 = new System.Windows.Forms.Label();
             this.tabPage34 = new System.Windows.Forms.TabPage();
+            this.label200 = new System.Windows.Forms.Label();
+            this.label241 = new System.Windows.Forms.Label();
             this.label234 = new System.Windows.Forms.Label();
             this.tabcontrol5ChoiceSound = new System.Windows.Forms.TextBox();
             this.label235 = new System.Windows.Forms.Label();
@@ -737,7 +750,7 @@
             this.tabPage36 = new System.Windows.Forms.TabPage();
             this.comboBox31 = new System.Windows.Forms.ComboBox();
             this.label249 = new System.Windows.Forms.Label();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage25 = new System.Windows.Forms.TabPage();
             this.label168 = new System.Windows.Forms.Label();
             this.tabcontrol4learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -790,6 +803,8 @@
             this.label191 = new System.Windows.Forms.Label();
             this.label192 = new System.Windows.Forms.Label();
             this.tabPage28 = new System.Windows.Forms.TabPage();
+            this.label587 = new System.Windows.Forms.Label();
+            this.label588 = new System.Windows.Forms.Label();
             this.label193 = new System.Windows.Forms.Label();
             this.tabcontrol4ChoiceSound = new System.Windows.Forms.TextBox();
             this.label194 = new System.Windows.Forms.Label();
@@ -824,7 +839,7 @@
             this.tabPage30 = new System.Windows.Forms.TabPage();
             this.comboBox25 = new System.Windows.Forms.ComboBox();
             this.label208 = new System.Windows.Forms.Label();
-            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage19 = new System.Windows.Forms.TabPage();
             this.label127 = new System.Windows.Forms.Label();
             this.tabcontrol3learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -877,6 +892,8 @@
             this.label150 = new System.Windows.Forms.Label();
             this.label151 = new System.Windows.Forms.Label();
             this.tabPage22 = new System.Windows.Forms.TabPage();
+            this.label159 = new System.Windows.Forms.Label();
+            this.label586 = new System.Windows.Forms.Label();
             this.label152 = new System.Windows.Forms.Label();
             this.tabcontrol3ChoiceSound = new System.Windows.Forms.TextBox();
             this.label153 = new System.Windows.Forms.Label();
@@ -911,7 +928,7 @@
             this.tabPage24 = new System.Windows.Forms.TabPage();
             this.comboBox19 = new System.Windows.Forms.ComboBox();
             this.label167 = new System.Windows.Forms.Label();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.label85 = new System.Windows.Forms.Label();
             this.tabcontrol2learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -964,6 +981,8 @@
             this.label109 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label585 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.tabcontrol2ChoiceSound = new System.Windows.Forms.TextBox();
             this.label112 = new System.Windows.Forms.Label();
@@ -998,7 +1017,7 @@
             this.tabPage18 = new System.Windows.Forms.TabPage();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.label126 = new System.Windows.Forms.Label();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.tabcontrol1learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -1051,6 +1070,8 @@
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.tabcontrol1ChoiceSound = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
@@ -1085,7 +1106,7 @@
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label84 = new System.Windows.Forms.Label();
-            this.tabControl9 = new System.Windows.Forms.TabControl();
+            this.tabControl8 = new System.Windows.Forms.TabControl();
             this.tabPage49 = new System.Windows.Forms.TabPage();
             this.label332 = new System.Windows.Forms.Label();
             this.tabcontrol8learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -1138,6 +1159,7 @@
             this.label355 = new System.Windows.Forms.Label();
             this.label356 = new System.Windows.Forms.Label();
             this.tabPage52 = new System.Windows.Forms.TabPage();
+            this.label579 = new System.Windows.Forms.Label();
             this.label357 = new System.Windows.Forms.Label();
             this.tabcontrol8ChoiceSound = new System.Windows.Forms.TextBox();
             this.label358 = new System.Windows.Forms.Label();
@@ -1173,7 +1195,7 @@
             this.tabPage54 = new System.Windows.Forms.TabPage();
             this.comboBox49 = new System.Windows.Forms.ComboBox();
             this.label372 = new System.Windows.Forms.Label();
-            this.tabControl10 = new System.Windows.Forms.TabControl();
+            this.tabControl9 = new System.Windows.Forms.TabControl();
             this.tabPage55 = new System.Windows.Forms.TabPage();
             this.label373 = new System.Windows.Forms.Label();
             this.tabcontrol9learnQuestionType = new System.Windows.Forms.ComboBox();
@@ -1226,6 +1248,8 @@
             this.label396 = new System.Windows.Forms.Label();
             this.label397 = new System.Windows.Forms.Label();
             this.tabPage58 = new System.Windows.Forms.TabPage();
+            this.label405 = new System.Windows.Forms.Label();
+            this.label580 = new System.Windows.Forms.Label();
             this.label398 = new System.Windows.Forms.Label();
             this.tabcontrol9ChoiceSound = new System.Windows.Forms.TextBox();
             this.label399 = new System.Windows.Forms.Label();
@@ -1261,126 +1285,101 @@
             this.comboBox55 = new System.Windows.Forms.ComboBox();
             this.label413 = new System.Windows.Forms.Label();
             this.label578 = new System.Windows.Forms.Label();
-            this.label579 = new System.Windows.Forms.Label();
-            this.label405 = new System.Windows.Forms.Label();
-            this.label580 = new System.Windows.Forms.Label();
-            this.label446 = new System.Windows.Forms.Label();
-            this.label581 = new System.Windows.Forms.Label();
-            this.label487 = new System.Windows.Forms.Label();
-            this.label582 = new System.Windows.Forms.Label();
-            this.label583 = new System.Windows.Forms.Label();
-            this.label584 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
-            this.label585 = new System.Windows.Forms.Label();
-            this.label159 = new System.Windows.Forms.Label();
-            this.label586 = new System.Windows.Forms.Label();
-            this.label587 = new System.Windows.Forms.Label();
-            this.label588 = new System.Windows.Forms.Label();
-            this.label200 = new System.Windows.Forms.Label();
-            this.label241 = new System.Windows.Forms.Label();
-            this.label589 = new System.Windows.Forms.Label();
-            this.label590 = new System.Windows.Forms.Label();
-            this.label591 = new System.Windows.Forms.Label();
-            this.label592 = new System.Windows.Forms.Label();
-            this.label528 = new System.Windows.Forms.Label();
-            this.label593 = new System.Windows.Forms.Label();
-            this.label569 = new System.Windows.Forms.Label();
-            this.label594 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.button145 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tabControl0.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabcontrol7JudgeWrongImagepanel1.SuspendLayout();
-            this.tabControl14.SuspendLayout();
+            this.panel.SuspendLayout();
+            this.tabControl13.SuspendLayout();
+            this.tabPage82.SuspendLayout();
             this.tabPage79.SuspendLayout();
             this.tabPage80.SuspendLayout();
             this.tabPage81.SuspendLayout();
-            this.tabPage82.SuspendLayout();
             this.tabPage83.SuspendLayout();
             this.tabPage84.SuspendLayout();
-            this.tabControl13.SuspendLayout();
+            this.tabControl12.SuspendLayout();
             this.tabPage73.SuspendLayout();
             this.tabPage74.SuspendLayout();
             this.tabPage75.SuspendLayout();
             this.tabPage76.SuspendLayout();
             this.tabPage77.SuspendLayout();
             this.tabPage78.SuspendLayout();
-            this.tabControl12.SuspendLayout();
+            this.tabControl11.SuspendLayout();
             this.tabPage67.SuspendLayout();
             this.tabPage68.SuspendLayout();
             this.tabPage69.SuspendLayout();
             this.tabPage70.SuspendLayout();
             this.tabPage71.SuspendLayout();
             this.tabPage72.SuspendLayout();
-            this.tabControl8.SuspendLayout();
+            this.tabControl7.SuspendLayout();
             this.tabPage43.SuspendLayout();
             this.tabPage44.SuspendLayout();
             this.tabPage45.SuspendLayout();
             this.tabPage46.SuspendLayout();
             this.tabPage47.SuspendLayout();
             this.tabPage48.SuspendLayout();
-            this.tabControl11.SuspendLayout();
+            this.tabControl10.SuspendLayout();
             this.tabPage61.SuspendLayout();
             this.tabPage62.SuspendLayout();
             this.tabPage63.SuspendLayout();
             this.tabPage64.SuspendLayout();
             this.tabPage65.SuspendLayout();
             this.tabPage66.SuspendLayout();
-            this.tabControl7.SuspendLayout();
+            this.tabControl6.SuspendLayout();
             this.tabPage37.SuspendLayout();
             this.tabPage38.SuspendLayout();
             this.tabPage39.SuspendLayout();
             this.tabPage40.SuspendLayout();
             this.tabPage41.SuspendLayout();
             this.tabPage42.SuspendLayout();
-            this.tabControl6.SuspendLayout();
+            this.tabControl5.SuspendLayout();
             this.tabPage31.SuspendLayout();
             this.tabPage32.SuspendLayout();
             this.tabPage33.SuspendLayout();
             this.tabPage34.SuspendLayout();
             this.tabPage35.SuspendLayout();
             this.tabPage36.SuspendLayout();
-            this.tabControl5.SuspendLayout();
+            this.tabControl4.SuspendLayout();
             this.tabPage25.SuspendLayout();
             this.tabPage26.SuspendLayout();
             this.tabPage27.SuspendLayout();
             this.tabPage28.SuspendLayout();
             this.tabPage29.SuspendLayout();
             this.tabPage30.SuspendLayout();
-            this.tabControl4.SuspendLayout();
+            this.tabControl3.SuspendLayout();
             this.tabPage19.SuspendLayout();
             this.tabPage20.SuspendLayout();
             this.tabPage21.SuspendLayout();
             this.tabPage22.SuspendLayout();
             this.tabPage23.SuspendLayout();
             this.tabPage24.SuspendLayout();
-            this.tabControl3.SuspendLayout();
+            this.tabControl2.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.tabPage14.SuspendLayout();
             this.tabPage15.SuspendLayout();
             this.tabPage16.SuspendLayout();
             this.tabPage17.SuspendLayout();
             this.tabPage18.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.tabPage12.SuspendLayout();
-            this.tabControl9.SuspendLayout();
+            this.tabControl8.SuspendLayout();
             this.tabPage49.SuspendLayout();
             this.tabPage50.SuspendLayout();
             this.tabPage51.SuspendLayout();
             this.tabPage52.SuspendLayout();
             this.tabPage53.SuspendLayout();
             this.tabPage54.SuspendLayout();
-            this.tabControl10.SuspendLayout();
+            this.tabControl9.SuspendLayout();
             this.tabPage55.SuspendLayout();
             this.tabPage56.SuspendLayout();
             this.tabPage57.SuspendLayout();
@@ -1392,84 +1391,52 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label34.Location = new System.Drawing.Point(652, 9);
+            this.label34.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label34.Location = new System.Drawing.Point(304, 9);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(64, 16);
+            this.label34.Size = new System.Drawing.Size(115, 29);
             this.label34.TabIndex = 51;
-            this.label34.Text = "中文名:";
+            this.label34.Text = "训练名:";
             // 
             // trailChineseName
             // 
-            this.trailChineseName.Location = new System.Drawing.Point(717, 6);
+            this.trailChineseName.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.trailChineseName.Location = new System.Drawing.Point(422, 7);
             this.trailChineseName.Name = "trailChineseName";
-            this.trailChineseName.Size = new System.Drawing.Size(159, 21);
+            this.trailChineseName.Size = new System.Drawing.Size(159, 35);
             this.trailChineseName.TabIndex = 50;
             // 
             // lessonName
             // 
-            this.lessonName.Location = new System.Drawing.Point(289, 6);
+            this.lessonName.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lessonName.Location = new System.Drawing.Point(149, 6);
             this.lessonName.Name = "lessonName";
-            this.lessonName.Size = new System.Drawing.Size(127, 21);
+            this.lessonName.Size = new System.Drawing.Size(127, 35);
             this.lessonName.TabIndex = 47;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label35.Location = new System.Drawing.Point(435, 9);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(88, 16);
-            this.label35.TabIndex = 49;
-            this.label35.Text = "trialName:";
-            // 
-            // trailName
-            // 
-            this.trailName.Location = new System.Drawing.Point(529, 7);
-            this.trailName.Name = "trailName";
-            this.trailName.Size = new System.Drawing.Size(100, 21);
-            this.trailName.TabIndex = 48;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(226, 9);
+            this.label15.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(17, 9);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 16);
+            this.label15.Size = new System.Drawing.Size(129, 29);
             this.label15.TabIndex = 46;
             this.label15.Text = "课程名：";
             // 
-            // textBox1
+            // tabControl0
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 45;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 16);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "LessonHandle：";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(11, 19);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(318, 327);
-            this.tabControl1.TabIndex = 52;
+            this.tabControl0.Controls.Add(this.tabPage1);
+            this.tabControl0.Controls.Add(this.tabPage2);
+            this.tabControl0.Controls.Add(this.tabPage3);
+            this.tabControl0.Controls.Add(this.tabPage4);
+            this.tabControl0.Controls.Add(this.tabPage5);
+            this.tabControl0.Controls.Add(this.tabPage6);
+            this.tabControl0.Location = new System.Drawing.Point(11, 19);
+            this.tabControl0.Name = "tabControl0";
+            this.tabControl0.SelectedIndex = 0;
+            this.tabControl0.Size = new System.Drawing.Size(318, 327);
+            this.tabControl0.TabIndex = 52;
             // 
             // tabPage1
             // 
@@ -1997,6 +1964,25 @@
             this.tabPage4.Text = "选择";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label583
+            // 
+            this.label583.AutoSize = true;
+            this.label583.ForeColor = System.Drawing.Color.Red;
+            this.label583.Location = new System.Drawing.Point(8, 102);
+            this.label583.Name = "label583";
+            this.label583.Size = new System.Drawing.Size(305, 12);
+            this.label583.TabIndex = 83;
+            this.label583.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label584
+            // 
+            this.label584.AutoSize = true;
+            this.label584.Location = new System.Drawing.Point(23, 120);
+            this.label584.Name = "label584";
+            this.label584.Size = new System.Drawing.Size(41, 12);
+            this.label584.TabIndex = 82;
+            this.label584.Text = "正确项";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -2229,7 +2215,7 @@
             // 
             this.tabcontrol0PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol0PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol0PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol0PuzzleQuestionType.Name = "tabcontrol0PuzzleQuestionType";
@@ -2311,60 +2297,281 @@
             this.label19.TabIndex = 51;
             this.label19.Text = "题型";
             // 
-            // button3
+            // panel
             // 
-            this.button3.Location = new System.Drawing.Point(397, 490);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 78);
-            this.button3.TabIndex = 53;
-            this.button3.Text = "保存";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.panel.AutoScroll = true;
+            this.panel.Controls.Add(this.button3);
+            this.panel.Controls.Add(this.button144);
+            this.panel.Controls.Add(this.button143);
+            this.panel.Controls.Add(this.button142);
+            this.panel.Controls.Add(this.tabControl13);
+            this.panel.Controls.Add(this.tabControl12);
+            this.panel.Controls.Add(this.tabControl11);
+            this.panel.Controls.Add(this.tabControl7);
+            this.panel.Controls.Add(this.tabControl10);
+            this.panel.Controls.Add(this.tabControl6);
+            this.panel.Controls.Add(this.tabControl5);
+            this.panel.Controls.Add(this.tabControl4);
+            this.panel.Controls.Add(this.tabControl3);
+            this.panel.Controls.Add(this.tabControl2);
+            this.panel.Controls.Add(this.tabControl1);
+            this.panel.Controls.Add(this.tabControl0);
+            this.panel.Location = new System.Drawing.Point(12, 67);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1397, 1424);
+            this.panel.TabIndex = 55;
             // 
-            // tabcontrol7JudgeWrongImagepanel1
+            // button144
             // 
-            this.tabcontrol7JudgeWrongImagepanel1.AutoScroll = true;
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.button142);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl14);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl13);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl12);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl8);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl11);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl7);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl6);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl5);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl4);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl3);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl2);
-            this.tabcontrol7JudgeWrongImagepanel1.Controls.Add(this.tabControl1);
-            this.tabcontrol7JudgeWrongImagepanel1.Location = new System.Drawing.Point(12, 67);
-            this.tabcontrol7JudgeWrongImagepanel1.Name = "tabcontrol7JudgeWrongImagepanel1";
-            this.tabcontrol7JudgeWrongImagepanel1.Size = new System.Drawing.Size(1397, 1424);
-            this.tabcontrol7JudgeWrongImagepanel1.TabIndex = 55;
+            this.button144.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button144.Location = new System.Drawing.Point(718, 1157);
+            this.button144.Name = "button144";
+            this.button144.Size = new System.Drawing.Size(171, 88);
+            this.button144.TabIndex = 64;
+            this.button144.Text = "删除";
+            this.button144.UseVisualStyleBackColor = true;
+            this.button144.Click += new System.EventHandler(this.button144_Click);
+            // 
+            // button143
+            // 
+            this.button143.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button143.Location = new System.Drawing.Point(950, 1043);
+            this.button143.Name = "button143";
+            this.button143.Size = new System.Drawing.Size(171, 88);
+            this.button143.TabIndex = 63;
+            this.button143.Text = "修改";
+            this.button143.UseVisualStyleBackColor = true;
+            this.button143.Click += new System.EventHandler(this.button143_Click);
             // 
             // button142
             // 
-            this.button142.Location = new System.Drawing.Point(695, 1048);
+            this.button142.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button142.Location = new System.Drawing.Point(716, 1048);
             this.button142.Name = "button142";
-            this.button142.Size = new System.Drawing.Size(214, 88);
+            this.button142.Size = new System.Drawing.Size(171, 88);
             this.button142.TabIndex = 62;
             this.button142.Text = "保存";
             this.button142.UseVisualStyleBackColor = true;
             this.button142.Click += new System.EventHandler(this.button142_Click);
             // 
-            // tabControl14
+            // tabControl13
             // 
-            this.tabControl14.Controls.Add(this.tabPage82);
-            this.tabControl14.Controls.Add(this.tabPage79);
-            this.tabControl14.Controls.Add(this.tabPage80);
-            this.tabControl14.Controls.Add(this.tabPage81);
-            this.tabControl14.Controls.Add(this.tabPage83);
-            this.tabControl14.Controls.Add(this.tabPage84);
-            this.tabControl14.Location = new System.Drawing.Point(331, 1018);
-            this.tabControl14.Name = "tabControl14";
-            this.tabControl14.SelectedIndex = 0;
-            this.tabControl14.Size = new System.Drawing.Size(318, 327);
-            this.tabControl14.TabIndex = 61;
+            this.tabControl13.Controls.Add(this.tabPage82);
+            this.tabControl13.Controls.Add(this.tabPage79);
+            this.tabControl13.Controls.Add(this.tabPage80);
+            this.tabControl13.Controls.Add(this.tabPage81);
+            this.tabControl13.Controls.Add(this.tabPage83);
+            this.tabControl13.Controls.Add(this.tabPage84);
+            this.tabControl13.Location = new System.Drawing.Point(331, 1018);
+            this.tabControl13.Name = "tabControl13";
+            this.tabControl13.SelectedIndex = 0;
+            this.tabControl13.Size = new System.Drawing.Size(318, 327);
+            this.tabControl13.TabIndex = 61;
+            // 
+            // tabPage82
+            // 
+            this.tabPage82.Controls.Add(this.label569);
+            this.tabPage82.Controls.Add(this.label594);
+            this.tabPage82.Controls.Add(this.label562);
+            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceSound);
+            this.tabPage82.Controls.Add(this.label563);
+            this.tabPage82.Controls.Add(this.label564);
+            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceExciseName);
+            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceQuestionType);
+            this.tabPage82.Controls.Add(this.label565);
+            this.tabPage82.Controls.Add(this.button138);
+            this.tabPage82.Controls.Add(this.button139);
+            this.tabPage82.Controls.Add(this.label566);
+            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceDistraText);
+            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceRightImage);
+            this.tabPage82.Controls.Add(this.label567);
+            this.tabPage82.Controls.Add(this.label568);
+            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceRightText);
+            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceDistraImage);
+            this.tabPage82.Controls.Add(this.label570);
+            this.tabPage82.Controls.Add(this.label571);
+            this.tabPage82.Location = new System.Drawing.Point(4, 22);
+            this.tabPage82.Name = "tabPage82";
+            this.tabPage82.Size = new System.Drawing.Size(310, 301);
+            this.tabPage82.TabIndex = 3;
+            this.tabPage82.Text = "选择";
+            this.tabPage82.UseVisualStyleBackColor = true;
+            this.tabPage82.Click += new System.EventHandler(this.tabPage82_Click);
+            // 
+            // label569
+            // 
+            this.label569.AutoSize = true;
+            this.label569.ForeColor = System.Drawing.Color.Red;
+            this.label569.Location = new System.Drawing.Point(-2, 102);
+            this.label569.Name = "label569";
+            this.label569.Size = new System.Drawing.Size(305, 12);
+            this.label569.TabIndex = 83;
+            this.label569.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label594
+            // 
+            this.label594.AutoSize = true;
+            this.label594.Location = new System.Drawing.Point(13, 120);
+            this.label594.Name = "label594";
+            this.label594.Size = new System.Drawing.Size(41, 12);
+            this.label594.TabIndex = 82;
+            this.label594.Text = "正确项";
+            // 
+            // label562
+            // 
+            this.label562.AutoSize = true;
+            this.label562.Location = new System.Drawing.Point(20, 69);
+            this.label562.Name = "label562";
+            this.label562.Size = new System.Drawing.Size(29, 12);
+            this.label562.TabIndex = 74;
+            this.label562.Text = "声音";
+            // 
+            // tabcontrol13ChoiceSound
+            // 
+            this.tabcontrol13ChoiceSound.Location = new System.Drawing.Point(55, 66);
+            this.tabcontrol13ChoiceSound.Name = "tabcontrol13ChoiceSound";
+            this.tabcontrol13ChoiceSound.Size = new System.Drawing.Size(148, 21);
+            this.tabcontrol13ChoiceSound.TabIndex = 75;
+            // 
+            // label563
+            // 
+            this.label563.AutoSize = true;
+            this.label563.Location = new System.Drawing.Point(55, 69);
+            this.label563.Name = "label563";
+            this.label563.Size = new System.Drawing.Size(0, 12);
+            this.label563.TabIndex = 76;
+            // 
+            // label564
+            // 
+            this.label564.AutoSize = true;
+            this.label564.Location = new System.Drawing.Point(8, 19);
+            this.label564.Name = "label564";
+            this.label564.Size = new System.Drawing.Size(53, 12);
+            this.label564.TabIndex = 71;
+            this.label564.Text = "练习名称";
+            // 
+            // tabcontrol13ChoiceExciseName
+            // 
+            this.tabcontrol13ChoiceExciseName.Location = new System.Drawing.Point(67, 16);
+            this.tabcontrol13ChoiceExciseName.Name = "tabcontrol13ChoiceExciseName";
+            this.tabcontrol13ChoiceExciseName.Size = new System.Drawing.Size(148, 21);
+            this.tabcontrol13ChoiceExciseName.TabIndex = 72;
+            // 
+            // tabcontrol13ChoiceQuestionType
+            // 
+            this.tabcontrol13ChoiceQuestionType.FormattingEnabled = true;
+            this.tabcontrol13ChoiceQuestionType.Items.AddRange(new object[] {
+            "选择2选1",
+            "选择3选1",
+            "不存在"});
+            this.tabcontrol13ChoiceQuestionType.Location = new System.Drawing.Point(67, 43);
+            this.tabcontrol13ChoiceQuestionType.Name = "tabcontrol13ChoiceQuestionType";
+            this.tabcontrol13ChoiceQuestionType.Size = new System.Drawing.Size(130, 20);
+            this.tabcontrol13ChoiceQuestionType.TabIndex = 48;
+            this.tabcontrol13ChoiceQuestionType.Text = "不存在";
+            // 
+            // label565
+            // 
+            this.label565.AutoSize = true;
+            this.label565.Location = new System.Drawing.Point(20, 46);
+            this.label565.Name = "label565";
+            this.label565.Size = new System.Drawing.Size(29, 12);
+            this.label565.TabIndex = 45;
+            this.label565.Text = "题型";
+            // 
+            // button138
+            // 
+            this.button138.Location = new System.Drawing.Point(207, 232);
+            this.button138.Name = "button138";
+            this.button138.Size = new System.Drawing.Size(53, 23);
+            this.button138.TabIndex = 69;
+            this.button138.Text = "浏览";
+            this.button138.UseVisualStyleBackColor = true;
+            this.button138.Click += new System.EventHandler(this.button138_Click);
+            // 
+            // button139
+            // 
+            this.button139.Location = new System.Drawing.Point(209, 151);
+            this.button139.Name = "button139";
+            this.button139.Size = new System.Drawing.Size(53, 23);
+            this.button139.TabIndex = 68;
+            this.button139.Text = "浏览";
+            this.button139.UseVisualStyleBackColor = true;
+            this.button139.Click += new System.EventHandler(this.button139_Click);
+            // 
+            // label566
+            // 
+            this.label566.AutoSize = true;
+            this.label566.Location = new System.Drawing.Point(51, 263);
+            this.label566.Name = "label566";
+            this.label566.Size = new System.Drawing.Size(41, 12);
+            this.label566.TabIndex = 66;
+            this.label566.Text = "声音：";
+            // 
+            // tabcontrol13ChoiceDistraText
+            // 
+            this.tabcontrol13ChoiceDistraText.Location = new System.Drawing.Point(101, 260);
+            this.tabcontrol13ChoiceDistraText.Name = "tabcontrol13ChoiceDistraText";
+            this.tabcontrol13ChoiceDistraText.Size = new System.Drawing.Size(129, 21);
+            this.tabcontrol13ChoiceDistraText.TabIndex = 65;
+            // 
+            // tabcontrol13ChoiceRightImage
+            // 
+            this.tabcontrol13ChoiceRightImage.Location = new System.Drawing.Point(103, 151);
+            this.tabcontrol13ChoiceRightImage.Name = "tabcontrol13ChoiceRightImage";
+            this.tabcontrol13ChoiceRightImage.Size = new System.Drawing.Size(100, 21);
+            this.tabcontrol13ChoiceRightImage.TabIndex = 55;
+            // 
+            // label567
+            // 
+            this.label567.AutoSize = true;
+            this.label567.Location = new System.Drawing.Point(55, 187);
+            this.label567.Name = "label567";
+            this.label567.Size = new System.Drawing.Size(41, 12);
+            this.label567.TabIndex = 64;
+            this.label567.Text = "声音：";
+            // 
+            // label568
+            // 
+            this.label568.AutoSize = true;
+            this.label568.Location = new System.Drawing.Point(55, 154);
+            this.label568.Name = "label568";
+            this.label568.Size = new System.Drawing.Size(41, 12);
+            this.label568.TabIndex = 56;
+            this.label568.Text = "图片：";
+            // 
+            // tabcontrol13ChoiceRightText
+            // 
+            this.tabcontrol13ChoiceRightText.Location = new System.Drawing.Point(100, 184);
+            this.tabcontrol13ChoiceRightText.Name = "tabcontrol13ChoiceRightText";
+            this.tabcontrol13ChoiceRightText.Size = new System.Drawing.Size(127, 21);
+            this.tabcontrol13ChoiceRightText.TabIndex = 63;
+            this.tabcontrol13ChoiceRightText.TextChanged += new System.EventHandler(this.textBox308_TextChanged);
+            // 
+            // tabcontrol13ChoiceDistraImage
+            // 
+            this.tabcontrol13ChoiceDistraImage.Location = new System.Drawing.Point(101, 234);
+            this.tabcontrol13ChoiceDistraImage.Name = "tabcontrol13ChoiceDistraImage";
+            this.tabcontrol13ChoiceDistraImage.Size = new System.Drawing.Size(100, 21);
+            this.tabcontrol13ChoiceDistraImage.TabIndex = 58;
+            // 
+            // label570
+            // 
+            this.label570.AutoSize = true;
+            this.label570.Location = new System.Drawing.Point(53, 237);
+            this.label570.Name = "label570";
+            this.label570.Size = new System.Drawing.Size(41, 12);
+            this.label570.TabIndex = 59;
+            this.label570.Text = "图片：";
+            // 
+            // label571
+            // 
+            this.label571.AutoSize = true;
+            this.label571.Location = new System.Drawing.Point(14, 218);
+            this.label571.Name = "label571";
+            this.label571.Size = new System.Drawing.Size(41, 12);
+            this.label571.TabIndex = 60;
+            this.label571.Text = "干扰项";
             // 
             // tabPage79
             // 
@@ -2862,192 +3069,6 @@
             this.label561.TabIndex = 60;
             this.label561.Text = "干扰";
             // 
-            // tabPage82
-            // 
-            this.tabPage82.Controls.Add(this.label569);
-            this.tabPage82.Controls.Add(this.label594);
-            this.tabPage82.Controls.Add(this.label562);
-            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceSound);
-            this.tabPage82.Controls.Add(this.label563);
-            this.tabPage82.Controls.Add(this.label564);
-            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceExciseName);
-            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceQuestionType);
-            this.tabPage82.Controls.Add(this.label565);
-            this.tabPage82.Controls.Add(this.button138);
-            this.tabPage82.Controls.Add(this.button139);
-            this.tabPage82.Controls.Add(this.label566);
-            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceDistraText);
-            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceRightImage);
-            this.tabPage82.Controls.Add(this.label567);
-            this.tabPage82.Controls.Add(this.label568);
-            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceRightText);
-            this.tabPage82.Controls.Add(this.tabcontrol13ChoiceDistraImage);
-            this.tabPage82.Controls.Add(this.label570);
-            this.tabPage82.Controls.Add(this.label571);
-            this.tabPage82.Location = new System.Drawing.Point(4, 22);
-            this.tabPage82.Name = "tabPage82";
-            this.tabPage82.Size = new System.Drawing.Size(310, 301);
-            this.tabPage82.TabIndex = 3;
-            this.tabPage82.Text = "选择";
-            this.tabPage82.UseVisualStyleBackColor = true;
-            this.tabPage82.Click += new System.EventHandler(this.tabPage82_Click);
-            // 
-            // label562
-            // 
-            this.label562.AutoSize = true;
-            this.label562.Location = new System.Drawing.Point(20, 69);
-            this.label562.Name = "label562";
-            this.label562.Size = new System.Drawing.Size(29, 12);
-            this.label562.TabIndex = 74;
-            this.label562.Text = "声音";
-            // 
-            // tabcontrol13ChoiceSound
-            // 
-            this.tabcontrol13ChoiceSound.Location = new System.Drawing.Point(55, 66);
-            this.tabcontrol13ChoiceSound.Name = "tabcontrol13ChoiceSound";
-            this.tabcontrol13ChoiceSound.Size = new System.Drawing.Size(148, 21);
-            this.tabcontrol13ChoiceSound.TabIndex = 75;
-            // 
-            // label563
-            // 
-            this.label563.AutoSize = true;
-            this.label563.Location = new System.Drawing.Point(55, 69);
-            this.label563.Name = "label563";
-            this.label563.Size = new System.Drawing.Size(0, 12);
-            this.label563.TabIndex = 76;
-            // 
-            // label564
-            // 
-            this.label564.AutoSize = true;
-            this.label564.Location = new System.Drawing.Point(8, 19);
-            this.label564.Name = "label564";
-            this.label564.Size = new System.Drawing.Size(53, 12);
-            this.label564.TabIndex = 71;
-            this.label564.Text = "练习名称";
-            // 
-            // tabcontrol13ChoiceExciseName
-            // 
-            this.tabcontrol13ChoiceExciseName.Location = new System.Drawing.Point(67, 16);
-            this.tabcontrol13ChoiceExciseName.Name = "tabcontrol13ChoiceExciseName";
-            this.tabcontrol13ChoiceExciseName.Size = new System.Drawing.Size(148, 21);
-            this.tabcontrol13ChoiceExciseName.TabIndex = 72;
-            // 
-            // tabcontrol13ChoiceQuestionType
-            // 
-            this.tabcontrol13ChoiceQuestionType.FormattingEnabled = true;
-            this.tabcontrol13ChoiceQuestionType.Items.AddRange(new object[] {
-            "选择2选1",
-            "选择3选1",
-            "不存在"});
-            this.tabcontrol13ChoiceQuestionType.Location = new System.Drawing.Point(67, 43);
-            this.tabcontrol13ChoiceQuestionType.Name = "tabcontrol13ChoiceQuestionType";
-            this.tabcontrol13ChoiceQuestionType.Size = new System.Drawing.Size(130, 20);
-            this.tabcontrol13ChoiceQuestionType.TabIndex = 48;
-            this.tabcontrol13ChoiceQuestionType.Text = "不存在";
-            // 
-            // label565
-            // 
-            this.label565.AutoSize = true;
-            this.label565.Location = new System.Drawing.Point(20, 46);
-            this.label565.Name = "label565";
-            this.label565.Size = new System.Drawing.Size(29, 12);
-            this.label565.TabIndex = 45;
-            this.label565.Text = "题型";
-            // 
-            // button138
-            // 
-            this.button138.Location = new System.Drawing.Point(207, 232);
-            this.button138.Name = "button138";
-            this.button138.Size = new System.Drawing.Size(53, 23);
-            this.button138.TabIndex = 69;
-            this.button138.Text = "浏览";
-            this.button138.UseVisualStyleBackColor = true;
-            this.button138.Click += new System.EventHandler(this.button138_Click);
-            // 
-            // button139
-            // 
-            this.button139.Location = new System.Drawing.Point(209, 151);
-            this.button139.Name = "button139";
-            this.button139.Size = new System.Drawing.Size(53, 23);
-            this.button139.TabIndex = 68;
-            this.button139.Text = "浏览";
-            this.button139.UseVisualStyleBackColor = true;
-            this.button139.Click += new System.EventHandler(this.button139_Click);
-            // 
-            // label566
-            // 
-            this.label566.AutoSize = true;
-            this.label566.Location = new System.Drawing.Point(51, 263);
-            this.label566.Name = "label566";
-            this.label566.Size = new System.Drawing.Size(41, 12);
-            this.label566.TabIndex = 66;
-            this.label566.Text = "声音：";
-            // 
-            // tabcontrol13ChoiceDistraText
-            // 
-            this.tabcontrol13ChoiceDistraText.Location = new System.Drawing.Point(101, 260);
-            this.tabcontrol13ChoiceDistraText.Name = "tabcontrol13ChoiceDistraText";
-            this.tabcontrol13ChoiceDistraText.Size = new System.Drawing.Size(129, 21);
-            this.tabcontrol13ChoiceDistraText.TabIndex = 65;
-            // 
-            // tabcontrol13ChoiceRightImage
-            // 
-            this.tabcontrol13ChoiceRightImage.Location = new System.Drawing.Point(103, 151);
-            this.tabcontrol13ChoiceRightImage.Name = "tabcontrol13ChoiceRightImage";
-            this.tabcontrol13ChoiceRightImage.Size = new System.Drawing.Size(100, 21);
-            this.tabcontrol13ChoiceRightImage.TabIndex = 55;
-            // 
-            // label567
-            // 
-            this.label567.AutoSize = true;
-            this.label567.Location = new System.Drawing.Point(55, 187);
-            this.label567.Name = "label567";
-            this.label567.Size = new System.Drawing.Size(41, 12);
-            this.label567.TabIndex = 64;
-            this.label567.Text = "声音：";
-            // 
-            // label568
-            // 
-            this.label568.AutoSize = true;
-            this.label568.Location = new System.Drawing.Point(55, 154);
-            this.label568.Name = "label568";
-            this.label568.Size = new System.Drawing.Size(41, 12);
-            this.label568.TabIndex = 56;
-            this.label568.Text = "图片：";
-            // 
-            // tabcontrol13ChoiceRightText
-            // 
-            this.tabcontrol13ChoiceRightText.Location = new System.Drawing.Point(100, 184);
-            this.tabcontrol13ChoiceRightText.Name = "tabcontrol13ChoiceRightText";
-            this.tabcontrol13ChoiceRightText.Size = new System.Drawing.Size(127, 21);
-            this.tabcontrol13ChoiceRightText.TabIndex = 63;
-            this.tabcontrol13ChoiceRightText.TextChanged += new System.EventHandler(this.textBox308_TextChanged);
-            // 
-            // tabcontrol13ChoiceDistraImage
-            // 
-            this.tabcontrol13ChoiceDistraImage.Location = new System.Drawing.Point(101, 234);
-            this.tabcontrol13ChoiceDistraImage.Name = "tabcontrol13ChoiceDistraImage";
-            this.tabcontrol13ChoiceDistraImage.Size = new System.Drawing.Size(100, 21);
-            this.tabcontrol13ChoiceDistraImage.TabIndex = 58;
-            // 
-            // label570
-            // 
-            this.label570.AutoSize = true;
-            this.label570.Location = new System.Drawing.Point(53, 237);
-            this.label570.Name = "label570";
-            this.label570.Size = new System.Drawing.Size(41, 12);
-            this.label570.TabIndex = 59;
-            this.label570.Text = "图片：";
-            // 
-            // label571
-            // 
-            this.label571.AutoSize = true;
-            this.label571.Location = new System.Drawing.Point(14, 218);
-            this.label571.Name = "label571";
-            this.label571.Size = new System.Drawing.Size(41, 12);
-            this.label571.TabIndex = 60;
-            this.label571.Text = "干扰项";
-            // 
             // tabPage83
             // 
             this.tabPage83.Controls.Add(this.button140);
@@ -3125,7 +3146,7 @@
             // 
             this.tabcontrol13PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol13PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol13PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol13PuzzleQuestionType.Name = "tabcontrol13PuzzleQuestionType";
@@ -3206,19 +3227,19 @@
             this.label577.TabIndex = 51;
             this.label577.Text = "题型";
             // 
-            // tabControl13
+            // tabControl12
             // 
-            this.tabControl13.Controls.Add(this.tabPage73);
-            this.tabControl13.Controls.Add(this.tabPage74);
-            this.tabControl13.Controls.Add(this.tabPage75);
-            this.tabControl13.Controls.Add(this.tabPage76);
-            this.tabControl13.Controls.Add(this.tabPage77);
-            this.tabControl13.Controls.Add(this.tabPage78);
-            this.tabControl13.Location = new System.Drawing.Point(11, 1018);
-            this.tabControl13.Name = "tabControl13";
-            this.tabControl13.SelectedIndex = 0;
-            this.tabControl13.Size = new System.Drawing.Size(318, 327);
-            this.tabControl13.TabIndex = 60;
+            this.tabControl12.Controls.Add(this.tabPage73);
+            this.tabControl12.Controls.Add(this.tabPage74);
+            this.tabControl12.Controls.Add(this.tabPage75);
+            this.tabControl12.Controls.Add(this.tabPage76);
+            this.tabControl12.Controls.Add(this.tabPage77);
+            this.tabControl12.Controls.Add(this.tabPage78);
+            this.tabControl12.Location = new System.Drawing.Point(11, 1018);
+            this.tabControl12.Name = "tabControl12";
+            this.tabControl12.SelectedIndex = 0;
+            this.tabControl12.Size = new System.Drawing.Size(318, 327);
+            this.tabControl12.TabIndex = 60;
             // 
             // tabPage73
             // 
@@ -3745,6 +3766,25 @@
             this.tabPage76.Text = "选择";
             this.tabPage76.UseVisualStyleBackColor = true;
             // 
+            // label528
+            // 
+            this.label528.AutoSize = true;
+            this.label528.ForeColor = System.Drawing.Color.Red;
+            this.label528.Location = new System.Drawing.Point(3, 102);
+            this.label528.Name = "label528";
+            this.label528.Size = new System.Drawing.Size(305, 12);
+            this.label528.TabIndex = 83;
+            this.label528.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label593
+            // 
+            this.label593.AutoSize = true;
+            this.label593.Location = new System.Drawing.Point(18, 120);
+            this.label593.Name = "label593";
+            this.label593.Size = new System.Drawing.Size(41, 12);
+            this.label593.TabIndex = 82;
+            this.label593.Text = "正确项";
+            // 
             // label521
             // 
             this.label521.AutoSize = true;
@@ -3977,7 +4017,7 @@
             // 
             this.tabcontrol12PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol12PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol12PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol12PuzzleQuestionType.Name = "tabcontrol12PuzzleQuestionType";
@@ -4058,19 +4098,19 @@
             this.label536.TabIndex = 51;
             this.label536.Text = "题型";
             // 
-            // tabControl12
+            // tabControl11
             // 
-            this.tabControl12.Controls.Add(this.tabPage67);
-            this.tabControl12.Controls.Add(this.tabPage68);
-            this.tabControl12.Controls.Add(this.tabPage69);
-            this.tabControl12.Controls.Add(this.tabPage70);
-            this.tabControl12.Controls.Add(this.tabPage71);
-            this.tabControl12.Controls.Add(this.tabPage72);
-            this.tabControl12.Location = new System.Drawing.Point(988, 685);
-            this.tabControl12.Name = "tabControl12";
-            this.tabControl12.SelectedIndex = 0;
-            this.tabControl12.Size = new System.Drawing.Size(318, 327);
-            this.tabControl12.TabIndex = 59;
+            this.tabControl11.Controls.Add(this.tabPage67);
+            this.tabControl11.Controls.Add(this.tabPage68);
+            this.tabControl11.Controls.Add(this.tabPage69);
+            this.tabControl11.Controls.Add(this.tabPage70);
+            this.tabControl11.Controls.Add(this.tabPage71);
+            this.tabControl11.Controls.Add(this.tabPage72);
+            this.tabControl11.Location = new System.Drawing.Point(988, 685);
+            this.tabControl11.Name = "tabControl11";
+            this.tabControl11.SelectedIndex = 0;
+            this.tabControl11.Size = new System.Drawing.Size(318, 327);
+            this.tabControl11.TabIndex = 59;
             // 
             // tabPage67
             // 
@@ -4597,6 +4637,25 @@
             this.tabPage70.Text = "选择";
             this.tabPage70.UseVisualStyleBackColor = true;
             // 
+            // label487
+            // 
+            this.label487.AutoSize = true;
+            this.label487.ForeColor = System.Drawing.Color.Red;
+            this.label487.Location = new System.Drawing.Point(2, 108);
+            this.label487.Name = "label487";
+            this.label487.Size = new System.Drawing.Size(305, 12);
+            this.label487.TabIndex = 83;
+            this.label487.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label582
+            // 
+            this.label582.AutoSize = true;
+            this.label582.Location = new System.Drawing.Point(17, 126);
+            this.label582.Name = "label582";
+            this.label582.Size = new System.Drawing.Size(41, 12);
+            this.label582.TabIndex = 82;
+            this.label582.Text = "正确项";
+            // 
             // label480
             // 
             this.label480.AutoSize = true;
@@ -4829,7 +4888,7 @@
             // 
             this.tabcontrol11PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol11PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol11PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol11PuzzleQuestionType.Name = "tabcontrol11PuzzleQuestionType";
@@ -4911,19 +4970,19 @@
             this.label495.TabIndex = 51;
             this.label495.Text = "题型";
             // 
-            // tabControl8
+            // tabControl7
             // 
-            this.tabControl8.Controls.Add(this.tabPage43);
-            this.tabControl8.Controls.Add(this.tabPage44);
-            this.tabControl8.Controls.Add(this.tabPage45);
-            this.tabControl8.Controls.Add(this.tabPage46);
-            this.tabControl8.Controls.Add(this.tabPage47);
-            this.tabControl8.Controls.Add(this.tabPage48);
-            this.tabControl8.Location = new System.Drawing.Point(992, 352);
-            this.tabControl8.Name = "tabControl8";
-            this.tabControl8.SelectedIndex = 0;
-            this.tabControl8.Size = new System.Drawing.Size(318, 327);
-            this.tabControl8.TabIndex = 59;
+            this.tabControl7.Controls.Add(this.tabPage43);
+            this.tabControl7.Controls.Add(this.tabPage44);
+            this.tabControl7.Controls.Add(this.tabPage45);
+            this.tabControl7.Controls.Add(this.tabPage46);
+            this.tabControl7.Controls.Add(this.tabPage47);
+            this.tabControl7.Controls.Add(this.tabPage48);
+            this.tabControl7.Location = new System.Drawing.Point(992, 352);
+            this.tabControl7.Name = "tabControl7";
+            this.tabControl7.SelectedIndex = 0;
+            this.tabControl7.Size = new System.Drawing.Size(318, 327);
+            this.tabControl7.TabIndex = 59;
             // 
             // tabPage43
             // 
@@ -5451,6 +5510,25 @@
             this.tabPage46.Text = "选择";
             this.tabPage46.UseVisualStyleBackColor = true;
             // 
+            // label591
+            // 
+            this.label591.AutoSize = true;
+            this.label591.ForeColor = System.Drawing.Color.Red;
+            this.label591.Location = new System.Drawing.Point(8, 97);
+            this.label591.Name = "label591";
+            this.label591.Size = new System.Drawing.Size(305, 12);
+            this.label591.TabIndex = 83;
+            this.label591.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label592
+            // 
+            this.label592.AutoSize = true;
+            this.label592.Location = new System.Drawing.Point(23, 115);
+            this.label592.Name = "label592";
+            this.label592.Size = new System.Drawing.Size(41, 12);
+            this.label592.TabIndex = 82;
+            this.label592.Text = "正确项";
+            // 
             // label316
             // 
             this.label316.AutoSize = true;
@@ -5692,7 +5770,7 @@
             // 
             this.tabcontrol7PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol7PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol7PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol7PuzzleQuestionType.Name = "tabcontrol7PuzzleQuestionType";
@@ -5773,19 +5851,19 @@
             this.label331.TabIndex = 51;
             this.label331.Text = "题型";
             // 
-            // tabControl11
+            // tabControl10
             // 
-            this.tabControl11.Controls.Add(this.tabPage61);
-            this.tabControl11.Controls.Add(this.tabPage62);
-            this.tabControl11.Controls.Add(this.tabPage63);
-            this.tabControl11.Controls.Add(this.tabPage64);
-            this.tabControl11.Controls.Add(this.tabPage65);
-            this.tabControl11.Controls.Add(this.tabPage66);
-            this.tabControl11.Location = new System.Drawing.Point(655, 685);
-            this.tabControl11.Name = "tabControl11";
-            this.tabControl11.SelectedIndex = 0;
-            this.tabControl11.Size = new System.Drawing.Size(318, 327);
-            this.tabControl11.TabIndex = 58;
+            this.tabControl10.Controls.Add(this.tabPage61);
+            this.tabControl10.Controls.Add(this.tabPage62);
+            this.tabControl10.Controls.Add(this.tabPage63);
+            this.tabControl10.Controls.Add(this.tabPage64);
+            this.tabControl10.Controls.Add(this.tabPage65);
+            this.tabControl10.Controls.Add(this.tabPage66);
+            this.tabControl10.Location = new System.Drawing.Point(655, 685);
+            this.tabControl10.Name = "tabControl10";
+            this.tabControl10.SelectedIndex = 0;
+            this.tabControl10.Size = new System.Drawing.Size(318, 327);
+            this.tabControl10.TabIndex = 58;
             // 
             // tabPage61
             // 
@@ -6313,6 +6391,25 @@
             this.tabPage64.Text = "选择";
             this.tabPage64.UseVisualStyleBackColor = true;
             // 
+            // label446
+            // 
+            this.label446.AutoSize = true;
+            this.label446.ForeColor = System.Drawing.Color.Red;
+            this.label446.Location = new System.Drawing.Point(8, 99);
+            this.label446.Name = "label446";
+            this.label446.Size = new System.Drawing.Size(305, 12);
+            this.label446.TabIndex = 81;
+            this.label446.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label581
+            // 
+            this.label581.AutoSize = true;
+            this.label581.Location = new System.Drawing.Point(23, 117);
+            this.label581.Name = "label581";
+            this.label581.Size = new System.Drawing.Size(41, 12);
+            this.label581.TabIndex = 80;
+            this.label581.Text = "正确项";
+            // 
             // label439
             // 
             this.label439.AutoSize = true;
@@ -6547,7 +6644,7 @@
             // 
             this.tabcontrol10PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol10PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol10PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol10PuzzleQuestionType.Name = "tabcontrol10PuzzleQuestionType";
@@ -6628,19 +6725,19 @@
             this.label454.TabIndex = 51;
             this.label454.Text = "题型";
             // 
-            // tabControl7
+            // tabControl6
             // 
-            this.tabControl7.Controls.Add(this.tabPage37);
-            this.tabControl7.Controls.Add(this.tabPage38);
-            this.tabControl7.Controls.Add(this.tabPage39);
-            this.tabControl7.Controls.Add(this.tabPage40);
-            this.tabControl7.Controls.Add(this.tabPage41);
-            this.tabControl7.Controls.Add(this.tabPage42);
-            this.tabControl7.Location = new System.Drawing.Point(668, 352);
-            this.tabControl7.Name = "tabControl7";
-            this.tabControl7.SelectedIndex = 0;
-            this.tabControl7.Size = new System.Drawing.Size(318, 327);
-            this.tabControl7.TabIndex = 58;
+            this.tabControl6.Controls.Add(this.tabPage37);
+            this.tabControl6.Controls.Add(this.tabPage38);
+            this.tabControl6.Controls.Add(this.tabPage39);
+            this.tabControl6.Controls.Add(this.tabPage40);
+            this.tabControl6.Controls.Add(this.tabPage41);
+            this.tabControl6.Controls.Add(this.tabPage42);
+            this.tabControl6.Location = new System.Drawing.Point(668, 352);
+            this.tabControl6.Name = "tabControl6";
+            this.tabControl6.SelectedIndex = 0;
+            this.tabControl6.Size = new System.Drawing.Size(318, 327);
+            this.tabControl6.TabIndex = 58;
             // 
             // tabPage37
             // 
@@ -7170,6 +7267,25 @@
             this.tabPage40.Text = "选择";
             this.tabPage40.UseVisualStyleBackColor = true;
             // 
+            // label589
+            // 
+            this.label589.AutoSize = true;
+            this.label589.ForeColor = System.Drawing.Color.Red;
+            this.label589.Location = new System.Drawing.Point(9, 97);
+            this.label589.Name = "label589";
+            this.label589.Size = new System.Drawing.Size(305, 12);
+            this.label589.TabIndex = 83;
+            this.label589.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label590
+            // 
+            this.label590.AutoSize = true;
+            this.label590.Location = new System.Drawing.Point(24, 115);
+            this.label590.Name = "label590";
+            this.label590.Size = new System.Drawing.Size(41, 12);
+            this.label590.TabIndex = 82;
+            this.label590.Text = "正确项";
+            // 
             // label275
             // 
             this.label275.AutoSize = true;
@@ -7411,7 +7527,7 @@
             // 
             this.tabcontrol6PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol6PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol6PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol6PuzzleQuestionType.Name = "tabcontrol6PuzzleQuestionType";
@@ -7492,19 +7608,19 @@
             this.label290.TabIndex = 51;
             this.label290.Text = "题型";
             // 
-            // tabControl6
+            // tabControl5
             // 
-            this.tabControl6.Controls.Add(this.tabPage31);
-            this.tabControl6.Controls.Add(this.tabPage32);
-            this.tabControl6.Controls.Add(this.tabPage33);
-            this.tabControl6.Controls.Add(this.tabPage34);
-            this.tabControl6.Controls.Add(this.tabPage35);
-            this.tabControl6.Controls.Add(this.tabPage36);
-            this.tabControl6.Location = new System.Drawing.Point(335, 352);
-            this.tabControl6.Name = "tabControl6";
-            this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(318, 327);
-            this.tabControl6.TabIndex = 57;
+            this.tabControl5.Controls.Add(this.tabPage31);
+            this.tabControl5.Controls.Add(this.tabPage32);
+            this.tabControl5.Controls.Add(this.tabPage33);
+            this.tabControl5.Controls.Add(this.tabPage34);
+            this.tabControl5.Controls.Add(this.tabPage35);
+            this.tabControl5.Controls.Add(this.tabPage36);
+            this.tabControl5.Location = new System.Drawing.Point(335, 352);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(318, 327);
+            this.tabControl5.TabIndex = 57;
             // 
             // tabPage31
             // 
@@ -8032,6 +8148,25 @@
             this.tabPage34.Text = "选择";
             this.tabPage34.UseVisualStyleBackColor = true;
             // 
+            // label200
+            // 
+            this.label200.AutoSize = true;
+            this.label200.ForeColor = System.Drawing.Color.Red;
+            this.label200.Location = new System.Drawing.Point(3, 99);
+            this.label200.Name = "label200";
+            this.label200.Size = new System.Drawing.Size(305, 12);
+            this.label200.TabIndex = 83;
+            this.label200.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label241
+            // 
+            this.label241.AutoSize = true;
+            this.label241.Location = new System.Drawing.Point(18, 117);
+            this.label241.Name = "label241";
+            this.label241.Size = new System.Drawing.Size(41, 12);
+            this.label241.TabIndex = 82;
+            this.label241.Text = "正确项";
+            // 
             // label234
             // 
             this.label234.AutoSize = true;
@@ -8265,7 +8400,7 @@
             // 
             this.tabcontrol5PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol5PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol5PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol5PuzzleQuestionType.Name = "tabcontrol5PuzzleQuestionType";
@@ -8346,19 +8481,19 @@
             this.label249.TabIndex = 51;
             this.label249.Text = "题型";
             // 
-            // tabControl5
+            // tabControl4
             // 
-            this.tabControl5.Controls.Add(this.tabPage25);
-            this.tabControl5.Controls.Add(this.tabPage26);
-            this.tabControl5.Controls.Add(this.tabPage27);
-            this.tabControl5.Controls.Add(this.tabPage28);
-            this.tabControl5.Controls.Add(this.tabPage29);
-            this.tabControl5.Controls.Add(this.tabPage30);
-            this.tabControl5.Location = new System.Drawing.Point(11, 352);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(318, 327);
-            this.tabControl5.TabIndex = 56;
+            this.tabControl4.Controls.Add(this.tabPage25);
+            this.tabControl4.Controls.Add(this.tabPage26);
+            this.tabControl4.Controls.Add(this.tabPage27);
+            this.tabControl4.Controls.Add(this.tabPage28);
+            this.tabControl4.Controls.Add(this.tabPage29);
+            this.tabControl4.Controls.Add(this.tabPage30);
+            this.tabControl4.Location = new System.Drawing.Point(11, 352);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(318, 327);
+            this.tabControl4.TabIndex = 56;
             // 
             // tabPage25
             // 
@@ -8885,6 +9020,26 @@
             this.tabPage28.Text = "选择";
             this.tabPage28.UseVisualStyleBackColor = true;
             // 
+            // label587
+            // 
+            this.label587.AutoSize = true;
+            this.label587.ForeColor = System.Drawing.Color.Red;
+            this.label587.Location = new System.Drawing.Point(5, 108);
+            this.label587.Name = "label587";
+            this.label587.Size = new System.Drawing.Size(305, 12);
+            this.label587.TabIndex = 83;
+            this.label587.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            this.label587.Click += new System.EventHandler(this.label587_Click);
+            // 
+            // label588
+            // 
+            this.label588.AutoSize = true;
+            this.label588.Location = new System.Drawing.Point(20, 126);
+            this.label588.Name = "label588";
+            this.label588.Size = new System.Drawing.Size(41, 12);
+            this.label588.TabIndex = 82;
+            this.label588.Text = "正确项";
+            // 
             // label193
             // 
             this.label193.AutoSize = true;
@@ -9117,7 +9272,7 @@
             // 
             this.tabcontrol4PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol4PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol4PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol4PuzzleQuestionType.Name = "tabcontrol4PuzzleQuestionType";
@@ -9198,19 +9353,19 @@
             this.label208.TabIndex = 51;
             this.label208.Text = "题型";
             // 
-            // tabControl4
+            // tabControl3
             // 
-            this.tabControl4.Controls.Add(this.tabPage19);
-            this.tabControl4.Controls.Add(this.tabPage20);
-            this.tabControl4.Controls.Add(this.tabPage21);
-            this.tabControl4.Controls.Add(this.tabPage22);
-            this.tabControl4.Controls.Add(this.tabPage23);
-            this.tabControl4.Controls.Add(this.tabPage24);
-            this.tabControl4.Location = new System.Drawing.Point(992, 19);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(318, 327);
-            this.tabControl4.TabIndex = 55;
+            this.tabControl3.Controls.Add(this.tabPage19);
+            this.tabControl3.Controls.Add(this.tabPage20);
+            this.tabControl3.Controls.Add(this.tabPage21);
+            this.tabControl3.Controls.Add(this.tabPage22);
+            this.tabControl3.Controls.Add(this.tabPage23);
+            this.tabControl3.Controls.Add(this.tabPage24);
+            this.tabControl3.Location = new System.Drawing.Point(992, 19);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(318, 327);
+            this.tabControl3.TabIndex = 55;
             // 
             // tabPage19
             // 
@@ -9737,6 +9892,25 @@
             this.tabPage22.Text = "选择";
             this.tabPage22.UseVisualStyleBackColor = true;
             // 
+            // label159
+            // 
+            this.label159.AutoSize = true;
+            this.label159.ForeColor = System.Drawing.Color.Red;
+            this.label159.Location = new System.Drawing.Point(5, 102);
+            this.label159.Name = "label159";
+            this.label159.Size = new System.Drawing.Size(305, 12);
+            this.label159.TabIndex = 83;
+            this.label159.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label586
+            // 
+            this.label586.AutoSize = true;
+            this.label586.Location = new System.Drawing.Point(20, 120);
+            this.label586.Name = "label586";
+            this.label586.Size = new System.Drawing.Size(41, 12);
+            this.label586.TabIndex = 82;
+            this.label586.Text = "正确项";
+            // 
             // label152
             // 
             this.label152.AutoSize = true;
@@ -9969,7 +10143,7 @@
             // 
             this.tabcontrol3PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol3PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol3PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol3PuzzleQuestionType.Name = "tabcontrol3PuzzleQuestionType";
@@ -10050,19 +10224,19 @@
             this.label167.TabIndex = 51;
             this.label167.Text = "题型";
             // 
-            // tabControl3
+            // tabControl2
             // 
-            this.tabControl3.Controls.Add(this.tabPage13);
-            this.tabControl3.Controls.Add(this.tabPage14);
-            this.tabControl3.Controls.Add(this.tabPage15);
-            this.tabControl3.Controls.Add(this.tabPage16);
-            this.tabControl3.Controls.Add(this.tabPage17);
-            this.tabControl3.Controls.Add(this.tabPage18);
-            this.tabControl3.Location = new System.Drawing.Point(668, 19);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(318, 327);
-            this.tabControl3.TabIndex = 54;
+            this.tabControl2.Controls.Add(this.tabPage13);
+            this.tabControl2.Controls.Add(this.tabPage14);
+            this.tabControl2.Controls.Add(this.tabPage15);
+            this.tabControl2.Controls.Add(this.tabPage16);
+            this.tabControl2.Controls.Add(this.tabPage17);
+            this.tabControl2.Controls.Add(this.tabPage18);
+            this.tabControl2.Location = new System.Drawing.Point(668, 19);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(318, 327);
+            this.tabControl2.TabIndex = 54;
             // 
             // tabPage13
             // 
@@ -10592,6 +10766,25 @@
             this.tabPage16.Text = "选择";
             this.tabPage16.UseVisualStyleBackColor = true;
             // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.ForeColor = System.Drawing.Color.Red;
+            this.label118.Location = new System.Drawing.Point(5, 108);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(305, 12);
+            this.label118.TabIndex = 83;
+            this.label118.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label585
+            // 
+            this.label585.AutoSize = true;
+            this.label585.Location = new System.Drawing.Point(20, 126);
+            this.label585.Name = "label585";
+            this.label585.Size = new System.Drawing.Size(41, 12);
+            this.label585.TabIndex = 82;
+            this.label585.Text = "正确项";
+            // 
             // label111
             // 
             this.label111.AutoSize = true;
@@ -10824,7 +11017,7 @@
             // 
             this.tabcontrol2PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol2PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol2PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol2PuzzleQuestionType.Name = "tabcontrol2PuzzleQuestionType";
@@ -10905,19 +11098,19 @@
             this.label126.TabIndex = 51;
             this.label126.Text = "题型";
             // 
-            // tabControl2
+            // tabControl1
             // 
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Controls.Add(this.tabPage8);
-            this.tabControl2.Controls.Add(this.tabPage9);
-            this.tabControl2.Controls.Add(this.tabPage10);
-            this.tabControl2.Controls.Add(this.tabPage11);
-            this.tabControl2.Controls.Add(this.tabPage12);
-            this.tabControl2.Location = new System.Drawing.Point(335, 19);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(318, 327);
-            this.tabControl2.TabIndex = 53;
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Controls.Add(this.tabPage10);
+            this.tabControl1.Controls.Add(this.tabPage11);
+            this.tabControl1.Controls.Add(this.tabPage12);
+            this.tabControl1.Location = new System.Drawing.Point(342, 19);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(318, 327);
+            this.tabControl1.TabIndex = 53;
             // 
             // tabPage7
             // 
@@ -11444,6 +11637,25 @@
             this.tabPage10.Text = "选择";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.ForeColor = System.Drawing.Color.Red;
+            this.label58.Location = new System.Drawing.Point(8, 108);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(305, 12);
+            this.label58.TabIndex = 83;
+            this.label58.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(23, 126);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(41, 12);
+            this.label76.TabIndex = 82;
+            this.label76.Text = "正确项";
+            // 
             // label69
             // 
             this.label69.AutoSize = true;
@@ -11662,7 +11874,7 @@
             // 
             this.tabcontrol1PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol1PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol1PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol1PuzzleQuestionType.Name = "tabcontrol1PuzzleQuestionType";
@@ -11759,19 +11971,19 @@
             this.label84.TabIndex = 51;
             this.label84.Text = "题型";
             // 
-            // tabControl9
+            // tabControl8
             // 
-            this.tabControl9.Controls.Add(this.tabPage49);
-            this.tabControl9.Controls.Add(this.tabPage50);
-            this.tabControl9.Controls.Add(this.tabPage51);
-            this.tabControl9.Controls.Add(this.tabPage52);
-            this.tabControl9.Controls.Add(this.tabPage53);
-            this.tabControl9.Controls.Add(this.tabPage54);
-            this.tabControl9.Location = new System.Drawing.Point(23, 739);
-            this.tabControl9.Name = "tabControl9";
-            this.tabControl9.SelectedIndex = 0;
-            this.tabControl9.Size = new System.Drawing.Size(318, 327);
-            this.tabControl9.TabIndex = 56;
+            this.tabControl8.Controls.Add(this.tabPage49);
+            this.tabControl8.Controls.Add(this.tabPage50);
+            this.tabControl8.Controls.Add(this.tabPage51);
+            this.tabControl8.Controls.Add(this.tabPage52);
+            this.tabControl8.Controls.Add(this.tabPage53);
+            this.tabControl8.Controls.Add(this.tabPage54);
+            this.tabControl8.Location = new System.Drawing.Point(23, 739);
+            this.tabControl8.Name = "tabControl8";
+            this.tabControl8.SelectedIndex = 0;
+            this.tabControl8.Size = new System.Drawing.Size(318, 327);
+            this.tabControl8.TabIndex = 56;
             // 
             // tabPage49
             // 
@@ -12300,6 +12512,16 @@
             this.tabPage52.Text = "选择";
             this.tabPage52.UseVisualStyleBackColor = true;
             // 
+            // label579
+            // 
+            this.label579.AutoSize = true;
+            this.label579.ForeColor = System.Drawing.Color.Red;
+            this.label579.Location = new System.Drawing.Point(8, 112);
+            this.label579.Name = "label579";
+            this.label579.Size = new System.Drawing.Size(305, 12);
+            this.label579.TabIndex = 77;
+            this.label579.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
             // label357
             // 
             this.label357.AutoSize = true;
@@ -12541,7 +12763,7 @@
             // 
             this.tabcontrol8PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol8PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol8PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol8PuzzleQuestionType.Name = "tabcontrol8PuzzleQuestionType";
@@ -12622,19 +12844,19 @@
             this.label372.TabIndex = 51;
             this.label372.Text = "题型";
             // 
-            // tabControl10
+            // tabControl9
             // 
-            this.tabControl10.Controls.Add(this.tabPage55);
-            this.tabControl10.Controls.Add(this.tabPage56);
-            this.tabControl10.Controls.Add(this.tabPage57);
-            this.tabControl10.Controls.Add(this.tabPage58);
-            this.tabControl10.Controls.Add(this.tabPage59);
-            this.tabControl10.Controls.Add(this.tabPage60);
-            this.tabControl10.Location = new System.Drawing.Point(343, 739);
-            this.tabControl10.Name = "tabControl10";
-            this.tabControl10.SelectedIndex = 0;
-            this.tabControl10.Size = new System.Drawing.Size(318, 327);
-            this.tabControl10.TabIndex = 57;
+            this.tabControl9.Controls.Add(this.tabPage55);
+            this.tabControl9.Controls.Add(this.tabPage56);
+            this.tabControl9.Controls.Add(this.tabPage57);
+            this.tabControl9.Controls.Add(this.tabPage58);
+            this.tabControl9.Controls.Add(this.tabPage59);
+            this.tabControl9.Controls.Add(this.tabPage60);
+            this.tabControl9.Location = new System.Drawing.Point(343, 739);
+            this.tabControl9.Name = "tabControl9";
+            this.tabControl9.SelectedIndex = 0;
+            this.tabControl9.Size = new System.Drawing.Size(318, 327);
+            this.tabControl9.TabIndex = 57;
             // 
             // tabPage55
             // 
@@ -13164,6 +13386,25 @@
             this.tabPage58.Text = "选择";
             this.tabPage58.UseVisualStyleBackColor = true;
             // 
+            // label405
+            // 
+            this.label405.AutoSize = true;
+            this.label405.ForeColor = System.Drawing.Color.Red;
+            this.label405.Location = new System.Drawing.Point(7, 112);
+            this.label405.Name = "label405";
+            this.label405.Size = new System.Drawing.Size(305, 12);
+            this.label405.TabIndex = 79;
+            this.label405.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            // 
+            // label580
+            // 
+            this.label580.AutoSize = true;
+            this.label580.Location = new System.Drawing.Point(22, 130);
+            this.label580.Name = "label580";
+            this.label580.Size = new System.Drawing.Size(41, 12);
+            this.label580.TabIndex = 78;
+            this.label580.Text = "正确项";
+            // 
             // label398
             // 
             this.label398.AutoSize = true;
@@ -13396,7 +13637,7 @@
             // 
             this.tabcontrol9PuzzleQuestionType.FormattingEnabled = true;
             this.tabcontrol9PuzzleQuestionType.Items.AddRange(new object[] {
-            "存在",
+            "拼图",
             "不存在"});
             this.tabcontrol9PuzzleQuestionType.Location = new System.Drawing.Point(60, 35);
             this.tabcontrol9PuzzleQuestionType.Name = "tabcontrol9PuzzleQuestionType";
@@ -13482,292 +13723,52 @@
             this.label578.AutoSize = true;
             this.label578.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label578.ForeColor = System.Drawing.Color.Red;
-            this.label578.Location = new System.Drawing.Point(12, 39);
+            this.label578.Location = new System.Drawing.Point(12, 46);
             this.label578.Name = "label578";
             this.label578.Size = new System.Drawing.Size(419, 20);
             this.label578.TabIndex = 58;
             this.label578.Text = "注意：以下内容每填写一项需用分号（;）分隔";
             // 
-            // label579
+            // button145
             // 
-            this.label579.AutoSize = true;
-            this.label579.ForeColor = System.Drawing.Color.Red;
-            this.label579.Location = new System.Drawing.Point(8, 112);
-            this.label579.Name = "label579";
-            this.label579.Size = new System.Drawing.Size(305, 12);
-            this.label579.TabIndex = 77;
-            this.label579.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
+            this.button145.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button145.Location = new System.Drawing.Point(646, 6);
+            this.button145.Name = "button145";
+            this.button145.Size = new System.Drawing.Size(160, 55);
+            this.button145.TabIndex = 59;
+            this.button145.Text = "查询";
+            this.button145.UseVisualStyleBackColor = true;
+            this.button145.Click += new System.EventHandler(this.button145_Click);
             // 
-            // label405
+            // button3
             // 
-            this.label405.AutoSize = true;
-            this.label405.ForeColor = System.Drawing.Color.Red;
-            this.label405.Location = new System.Drawing.Point(7, 112);
-            this.label405.Name = "label405";
-            this.label405.Size = new System.Drawing.Size(305, 12);
-            this.label405.TabIndex = 79;
-            this.label405.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label580
-            // 
-            this.label580.AutoSize = true;
-            this.label580.Location = new System.Drawing.Point(22, 130);
-            this.label580.Name = "label580";
-            this.label580.Size = new System.Drawing.Size(41, 12);
-            this.label580.TabIndex = 78;
-            this.label580.Text = "正确项";
-            // 
-            // label446
-            // 
-            this.label446.AutoSize = true;
-            this.label446.ForeColor = System.Drawing.Color.Red;
-            this.label446.Location = new System.Drawing.Point(8, 99);
-            this.label446.Name = "label446";
-            this.label446.Size = new System.Drawing.Size(305, 12);
-            this.label446.TabIndex = 81;
-            this.label446.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label581
-            // 
-            this.label581.AutoSize = true;
-            this.label581.Location = new System.Drawing.Point(23, 117);
-            this.label581.Name = "label581";
-            this.label581.Size = new System.Drawing.Size(41, 12);
-            this.label581.TabIndex = 80;
-            this.label581.Text = "正确项";
-            // 
-            // label487
-            // 
-            this.label487.AutoSize = true;
-            this.label487.ForeColor = System.Drawing.Color.Red;
-            this.label487.Location = new System.Drawing.Point(2, 108);
-            this.label487.Name = "label487";
-            this.label487.Size = new System.Drawing.Size(305, 12);
-            this.label487.TabIndex = 83;
-            this.label487.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label582
-            // 
-            this.label582.AutoSize = true;
-            this.label582.Location = new System.Drawing.Point(17, 126);
-            this.label582.Name = "label582";
-            this.label582.Size = new System.Drawing.Size(41, 12);
-            this.label582.TabIndex = 82;
-            this.label582.Text = "正确项";
-            // 
-            // label583
-            // 
-            this.label583.AutoSize = true;
-            this.label583.ForeColor = System.Drawing.Color.Red;
-            this.label583.Location = new System.Drawing.Point(8, 102);
-            this.label583.Name = "label583";
-            this.label583.Size = new System.Drawing.Size(305, 12);
-            this.label583.TabIndex = 83;
-            this.label583.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label584
-            // 
-            this.label584.AutoSize = true;
-            this.label584.Location = new System.Drawing.Point(23, 120);
-            this.label584.Name = "label584";
-            this.label584.Size = new System.Drawing.Size(41, 12);
-            this.label584.TabIndex = 82;
-            this.label584.Text = "正确项";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.ForeColor = System.Drawing.Color.Red;
-            this.label58.Location = new System.Drawing.Point(8, 108);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(305, 12);
-            this.label58.TabIndex = 83;
-            this.label58.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(23, 126);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(41, 12);
-            this.label76.TabIndex = 82;
-            this.label76.Text = "正确项";
-            // 
-            // label118
-            // 
-            this.label118.AutoSize = true;
-            this.label118.ForeColor = System.Drawing.Color.Red;
-            this.label118.Location = new System.Drawing.Point(5, 108);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(305, 12);
-            this.label118.TabIndex = 83;
-            this.label118.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label585
-            // 
-            this.label585.AutoSize = true;
-            this.label585.Location = new System.Drawing.Point(20, 126);
-            this.label585.Name = "label585";
-            this.label585.Size = new System.Drawing.Size(41, 12);
-            this.label585.TabIndex = 82;
-            this.label585.Text = "正确项";
-            // 
-            // label159
-            // 
-            this.label159.AutoSize = true;
-            this.label159.ForeColor = System.Drawing.Color.Red;
-            this.label159.Location = new System.Drawing.Point(5, 102);
-            this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(305, 12);
-            this.label159.TabIndex = 83;
-            this.label159.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label586
-            // 
-            this.label586.AutoSize = true;
-            this.label586.Location = new System.Drawing.Point(20, 120);
-            this.label586.Name = "label586";
-            this.label586.Size = new System.Drawing.Size(41, 12);
-            this.label586.TabIndex = 82;
-            this.label586.Text = "正确项";
-            // 
-            // label587
-            // 
-            this.label587.AutoSize = true;
-            this.label587.ForeColor = System.Drawing.Color.Red;
-            this.label587.Location = new System.Drawing.Point(5, 108);
-            this.label587.Name = "label587";
-            this.label587.Size = new System.Drawing.Size(305, 12);
-            this.label587.TabIndex = 83;
-            this.label587.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            this.label587.Click += new System.EventHandler(this.label587_Click);
-            // 
-            // label588
-            // 
-            this.label588.AutoSize = true;
-            this.label588.Location = new System.Drawing.Point(20, 126);
-            this.label588.Name = "label588";
-            this.label588.Size = new System.Drawing.Size(41, 12);
-            this.label588.TabIndex = 82;
-            this.label588.Text = "正确项";
-            // 
-            // label200
-            // 
-            this.label200.AutoSize = true;
-            this.label200.ForeColor = System.Drawing.Color.Red;
-            this.label200.Location = new System.Drawing.Point(3, 99);
-            this.label200.Name = "label200";
-            this.label200.Size = new System.Drawing.Size(305, 12);
-            this.label200.TabIndex = 83;
-            this.label200.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label241
-            // 
-            this.label241.AutoSize = true;
-            this.label241.Location = new System.Drawing.Point(18, 117);
-            this.label241.Name = "label241";
-            this.label241.Size = new System.Drawing.Size(41, 12);
-            this.label241.TabIndex = 82;
-            this.label241.Text = "正确项";
-            // 
-            // label589
-            // 
-            this.label589.AutoSize = true;
-            this.label589.ForeColor = System.Drawing.Color.Red;
-            this.label589.Location = new System.Drawing.Point(9, 97);
-            this.label589.Name = "label589";
-            this.label589.Size = new System.Drawing.Size(305, 12);
-            this.label589.TabIndex = 83;
-            this.label589.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label590
-            // 
-            this.label590.AutoSize = true;
-            this.label590.Location = new System.Drawing.Point(24, 115);
-            this.label590.Name = "label590";
-            this.label590.Size = new System.Drawing.Size(41, 12);
-            this.label590.TabIndex = 82;
-            this.label590.Text = "正确项";
-            // 
-            // label591
-            // 
-            this.label591.AutoSize = true;
-            this.label591.ForeColor = System.Drawing.Color.Red;
-            this.label591.Location = new System.Drawing.Point(8, 97);
-            this.label591.Name = "label591";
-            this.label591.Size = new System.Drawing.Size(305, 12);
-            this.label591.TabIndex = 83;
-            this.label591.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label592
-            // 
-            this.label592.AutoSize = true;
-            this.label592.Location = new System.Drawing.Point(23, 115);
-            this.label592.Name = "label592";
-            this.label592.Size = new System.Drawing.Size(41, 12);
-            this.label592.TabIndex = 82;
-            this.label592.Text = "正确项";
-            // 
-            // label528
-            // 
-            this.label528.AutoSize = true;
-            this.label528.ForeColor = System.Drawing.Color.Red;
-            this.label528.Location = new System.Drawing.Point(3, 102);
-            this.label528.Name = "label528";
-            this.label528.Size = new System.Drawing.Size(305, 12);
-            this.label528.TabIndex = 83;
-            this.label528.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label593
-            // 
-            this.label593.AutoSize = true;
-            this.label593.Location = new System.Drawing.Point(18, 120);
-            this.label593.Name = "label593";
-            this.label593.Size = new System.Drawing.Size(41, 12);
-            this.label593.TabIndex = 82;
-            this.label593.Text = "正确项";
-            // 
-            // label569
-            // 
-            this.label569.AutoSize = true;
-            this.label569.ForeColor = System.Drawing.Color.Red;
-            this.label569.Location = new System.Drawing.Point(-2, 102);
-            this.label569.Name = "label569";
-            this.label569.Size = new System.Drawing.Size(305, 12);
-            this.label569.TabIndex = 83;
-            this.label569.Text = "注意：若图片和声音需用对应时候，填写顺序必须相同！";
-            // 
-            // label594
-            // 
-            this.label594.AutoSize = true;
-            this.label594.Location = new System.Drawing.Point(13, 120);
-            this.label594.Name = "label594";
-            this.label594.Size = new System.Drawing.Size(41, 12);
-            this.label594.TabIndex = 82;
-            this.label594.Text = "正确项";
+            this.button3.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.Location = new System.Drawing.Point(947, 1160);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(171, 88);
+            this.button3.TabIndex = 65;
+            this.button3.Text = "清空";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1399, 761);
+            this.ClientSize = new System.Drawing.Size(1234, 761);
+            this.Controls.Add(this.button145);
             this.Controls.Add(this.label578);
-            this.Controls.Add(this.tabControl10);
             this.Controls.Add(this.tabControl9);
-            this.Controls.Add(this.tabcontrol7JudgeWrongImagepanel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.tabControl8);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.trailChineseName);
             this.Controls.Add(this.lessonName);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.trailName);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = " ";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl0.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -13780,21 +13781,21 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.tabcontrol7JudgeWrongImagepanel1.ResumeLayout(false);
-            this.tabControl14.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
+            this.tabControl13.ResumeLayout(false);
+            this.tabPage82.ResumeLayout(false);
+            this.tabPage82.PerformLayout();
             this.tabPage79.ResumeLayout(false);
             this.tabPage79.PerformLayout();
             this.tabPage80.ResumeLayout(false);
             this.tabPage80.PerformLayout();
             this.tabPage81.ResumeLayout(false);
             this.tabPage81.PerformLayout();
-            this.tabPage82.ResumeLayout(false);
-            this.tabPage82.PerformLayout();
             this.tabPage83.ResumeLayout(false);
             this.tabPage83.PerformLayout();
             this.tabPage84.ResumeLayout(false);
             this.tabPage84.PerformLayout();
-            this.tabControl13.ResumeLayout(false);
+            this.tabControl12.ResumeLayout(false);
             this.tabPage73.ResumeLayout(false);
             this.tabPage73.PerformLayout();
             this.tabPage74.ResumeLayout(false);
@@ -13807,7 +13808,7 @@
             this.tabPage77.PerformLayout();
             this.tabPage78.ResumeLayout(false);
             this.tabPage78.PerformLayout();
-            this.tabControl12.ResumeLayout(false);
+            this.tabControl11.ResumeLayout(false);
             this.tabPage67.ResumeLayout(false);
             this.tabPage67.PerformLayout();
             this.tabPage68.ResumeLayout(false);
@@ -13820,7 +13821,7 @@
             this.tabPage71.PerformLayout();
             this.tabPage72.ResumeLayout(false);
             this.tabPage72.PerformLayout();
-            this.tabControl8.ResumeLayout(false);
+            this.tabControl7.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
             this.tabPage43.PerformLayout();
             this.tabPage44.ResumeLayout(false);
@@ -13833,7 +13834,7 @@
             this.tabPage47.PerformLayout();
             this.tabPage48.ResumeLayout(false);
             this.tabPage48.PerformLayout();
-            this.tabControl11.ResumeLayout(false);
+            this.tabControl10.ResumeLayout(false);
             this.tabPage61.ResumeLayout(false);
             this.tabPage61.PerformLayout();
             this.tabPage62.ResumeLayout(false);
@@ -13846,7 +13847,7 @@
             this.tabPage65.PerformLayout();
             this.tabPage66.ResumeLayout(false);
             this.tabPage66.PerformLayout();
-            this.tabControl7.ResumeLayout(false);
+            this.tabControl6.ResumeLayout(false);
             this.tabPage37.ResumeLayout(false);
             this.tabPage37.PerformLayout();
             this.tabPage38.ResumeLayout(false);
@@ -13859,7 +13860,7 @@
             this.tabPage41.PerformLayout();
             this.tabPage42.ResumeLayout(false);
             this.tabPage42.PerformLayout();
-            this.tabControl6.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
             this.tabPage31.ResumeLayout(false);
             this.tabPage31.PerformLayout();
             this.tabPage32.ResumeLayout(false);
@@ -13872,7 +13873,7 @@
             this.tabPage35.PerformLayout();
             this.tabPage36.ResumeLayout(false);
             this.tabPage36.PerformLayout();
-            this.tabControl5.ResumeLayout(false);
+            this.tabControl4.ResumeLayout(false);
             this.tabPage25.ResumeLayout(false);
             this.tabPage25.PerformLayout();
             this.tabPage26.ResumeLayout(false);
@@ -13885,7 +13886,7 @@
             this.tabPage29.PerformLayout();
             this.tabPage30.ResumeLayout(false);
             this.tabPage30.PerformLayout();
-            this.tabControl4.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
             this.tabPage19.ResumeLayout(false);
             this.tabPage19.PerformLayout();
             this.tabPage20.ResumeLayout(false);
@@ -13898,7 +13899,7 @@
             this.tabPage23.PerformLayout();
             this.tabPage24.ResumeLayout(false);
             this.tabPage24.PerformLayout();
-            this.tabControl3.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
             this.tabPage14.ResumeLayout(false);
@@ -13911,7 +13912,7 @@
             this.tabPage17.PerformLayout();
             this.tabPage18.ResumeLayout(false);
             this.tabPage18.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
@@ -13924,7 +13925,7 @@
             this.tabPage11.PerformLayout();
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
-            this.tabControl9.ResumeLayout(false);
+            this.tabControl8.ResumeLayout(false);
             this.tabPage49.ResumeLayout(false);
             this.tabPage49.PerformLayout();
             this.tabPage50.ResumeLayout(false);
@@ -13937,7 +13938,7 @@
             this.tabPage53.PerformLayout();
             this.tabPage54.ResumeLayout(false);
             this.tabPage54.PerformLayout();
-            this.tabControl10.ResumeLayout(false);
+            this.tabControl9.ResumeLayout(false);
             this.tabPage55.ResumeLayout(false);
             this.tabPage55.PerformLayout();
             this.tabPage56.ResumeLayout(false);
@@ -13960,12 +13961,8 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox trailChineseName;
         private System.Windows.Forms.TextBox lessonName;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox trailName;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl0;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ComboBox tabcontrol0MatchQuestionType;
@@ -14009,7 +14006,6 @@
         private System.Windows.Forms.TextBox tabcontrol0MatchExciseName;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox tabcontrol0PuzzleExciseName;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox tabcontrol0JudgeWrongImage;
@@ -14051,8 +14047,8 @@
         private System.Windows.Forms.TextBox tabcontrol0LearnImage;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox tabcontrol0LearnPy;
-        private System.Windows.Forms.Panel tabcontrol7JudgeWrongImagepanel1;
-        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage19;
         private System.Windows.Forms.Label label127;
         private System.Windows.Forms.ComboBox tabcontrol3learnQuestionType;
@@ -14136,7 +14132,7 @@
         private System.Windows.Forms.TabPage tabPage24;
         private System.Windows.Forms.ComboBox comboBox19;
         private System.Windows.Forms.Label label167;
-        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.ComboBox tabcontrol2learnQuestionType;
@@ -14220,7 +14216,7 @@
         private System.Windows.Forms.TabPage tabPage18;
         private System.Windows.Forms.ComboBox comboBox13;
         private System.Windows.Forms.Label label126;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox tabcontrol1learnQuestionType;
@@ -14307,7 +14303,7 @@
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.TabControl tabControl8;
+        private System.Windows.Forms.TabControl tabControl7;
         private System.Windows.Forms.TabPage tabPage43;
         private System.Windows.Forms.Label label291;
         private System.Windows.Forms.ComboBox tabcontrol7learnQuestionType;
@@ -14392,7 +14388,7 @@
         private System.Windows.Forms.TabPage tabPage48;
         private System.Windows.Forms.ComboBox comboBox43;
         private System.Windows.Forms.Label label331;
-        private System.Windows.Forms.TabControl tabControl7;
+        private System.Windows.Forms.TabControl tabControl6;
         private System.Windows.Forms.TabPage tabPage37;
         private System.Windows.Forms.Label label250;
         private System.Windows.Forms.ComboBox tabcontrol6learnQuestionType;
@@ -14477,7 +14473,7 @@
         private System.Windows.Forms.TabPage tabPage42;
         private System.Windows.Forms.ComboBox comboBox37;
         private System.Windows.Forms.Label label290;
-        private System.Windows.Forms.TabControl tabControl6;
+        private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage31;
         private System.Windows.Forms.Label label209;
         private System.Windows.Forms.ComboBox tabcontrol5learnQuestionType;
@@ -14562,7 +14558,7 @@
         private System.Windows.Forms.TabPage tabPage36;
         private System.Windows.Forms.ComboBox comboBox31;
         private System.Windows.Forms.Label label249;
-        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage25;
         private System.Windows.Forms.Label label168;
         private System.Windows.Forms.ComboBox tabcontrol4learnQuestionType;
@@ -14646,7 +14642,7 @@
         private System.Windows.Forms.TabPage tabPage30;
         private System.Windows.Forms.ComboBox comboBox25;
         private System.Windows.Forms.Label label208;
-        private System.Windows.Forms.TabControl tabControl9;
+        private System.Windows.Forms.TabControl tabControl8;
         private System.Windows.Forms.TabPage tabPage49;
         private System.Windows.Forms.Label label332;
         private System.Windows.Forms.ComboBox tabcontrol8learnQuestionType;
@@ -14721,7 +14717,7 @@
         private System.Windows.Forms.TabPage tabPage54;
         private System.Windows.Forms.ComboBox comboBox49;
         private System.Windows.Forms.Label label372;
-        private System.Windows.Forms.TabControl tabControl10;
+        private System.Windows.Forms.TabControl tabControl9;
         private System.Windows.Forms.TabPage tabPage55;
         private System.Windows.Forms.Label label373;
         private System.Windows.Forms.ComboBox tabcontrol9learnQuestionType;
@@ -14795,7 +14791,7 @@
         private System.Windows.Forms.TabPage tabPage60;
         private System.Windows.Forms.ComboBox comboBox55;
         private System.Windows.Forms.Label label413;
-        private System.Windows.Forms.TabControl tabControl11;
+        private System.Windows.Forms.TabControl tabControl10;
         private System.Windows.Forms.TabPage tabPage61;
         private System.Windows.Forms.Label label414;
         private System.Windows.Forms.ComboBox tabcontrol10learnQuestionType;
@@ -14879,7 +14875,7 @@
         private System.Windows.Forms.TabPage tabPage66;
         private System.Windows.Forms.ComboBox comboBox61;
         private System.Windows.Forms.Label label454;
-        private System.Windows.Forms.TabControl tabControl12;
+        private System.Windows.Forms.TabControl tabControl11;
         private System.Windows.Forms.TabPage tabPage67;
         private System.Windows.Forms.Label label455;
         private System.Windows.Forms.ComboBox tabcontrol11learnQuestionType;
@@ -14963,7 +14959,7 @@
         private System.Windows.Forms.TabPage tabPage72;
         private System.Windows.Forms.ComboBox comboBox67;
         private System.Windows.Forms.Label label495;
-        private System.Windows.Forms.TabControl tabControl14;
+        private System.Windows.Forms.TabControl tabControl13;
         private System.Windows.Forms.TabPage tabPage79;
         private System.Windows.Forms.Label label537;
         private System.Windows.Forms.ComboBox tabcontrol13learnQuestionType;
@@ -15047,7 +15043,7 @@
         private System.Windows.Forms.TabPage tabPage84;
         private System.Windows.Forms.ComboBox comboBox79;
         private System.Windows.Forms.Label label577;
-        private System.Windows.Forms.TabControl tabControl13;
+        private System.Windows.Forms.TabControl tabControl12;
         private System.Windows.Forms.TabPage tabPage73;
         private System.Windows.Forms.Label label496;
         private System.Windows.Forms.ComboBox tabcontrol12learnQuestionType;
@@ -15219,5 +15215,9 @@
         private System.Windows.Forms.Label label590;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.Label label241;
+        private System.Windows.Forms.Button button143;
+        private System.Windows.Forms.Button button144;
+        private System.Windows.Forms.Button button145;
+        private System.Windows.Forms.Button button3;
     }
 }

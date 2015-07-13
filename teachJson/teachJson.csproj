@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Answer.cs" />
+    <Compile Include="Base.cs" />
     <Compile Include="Choice.cs" />
     <Compile Include="Draw.cs" />
     <Compile Include="Judgment.cs" />

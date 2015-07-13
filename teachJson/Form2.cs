@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 namespace teachJson
 {
     public partial class Form2 : Form
@@ -19,114 +20,6 @@ namespace teachJson
             dbhelper = new SqlHelper();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Trail trail = new Trail();
-            Learning learning = new Learning();
-            Judgment judgment = new Judgment();
-            Match match = new Match();
-            Choice choice = new Choice();
-            Puzzle puzzle = new Puzzle();
-            if(!this.tabcontrol0learnQuestionType.Text.Equals("不存在"))
-            {
-                learning.ExciseName = this.tabcontrol0LearnExciseName.Text;
-                learning.QuestionType = "learning";
-                learning.Question = new ImageItem();
-                learning.Question.Image = this.tabcontrol0LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol0learnSound.Text;
-                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
-              
-                learning.PinYing = this.tabcontrol0LearnPy.Text;
-                string strSerializeJSON = JsonConvert.SerializeObject(learning);
-               // MessageBox.Show(strSerializeJSON);
-
-
-            }
-            if (!this.tabcontrol0JudgeQuestionType.Text.Equals("不存在"))
-            {
-                judgment.ExciseName = this.tabcontrol0JudgeExciseName.Text;
-                judgment.Speech = this.tabcontro0JudgeSound.Text;
-                judgment.QuestionType = "judge";
-                judgment.Question = new ImageItem();
-
-                judgment.Question.Image = this.tabcontrol0JudgeRightImage.Text;
-
-                judgment.Distractor = new ImageItem();
-                judgment.Distractor.Image = this.tabcontrol0JudgeWrongImage.Text;
-           
-                
-
-                string judgeSerializeJSON = JsonConvert.SerializeObject(judgment);
-              //  MessageBox.Show(judgeSerializeJSON);
-
-            }
-         if (!this.tabcontrol0MatchQuestionType.Text.Equals("不存在"))
-            {
-                match.ExciseName = tabcontrol0MatchExciseName.Text;
-                match.QuestionType = this.tabcontrol0MatchQuestionType.Text;
-                match.Speech = this.tabcontrol0MatchSound.Text;
-                match.Question = new ImageItem();
-                match.Question.Image = this.tabcontrol0MatchQuestionImage.Text;
-                        match.Answer = new ImageItem();
-                match.Answer.Image=this.tabcontrol0MatchAnswerImage.Text;
-                 match.Distractor = new ImageItem();
-                match.Distractor.Image = this.tabcontrol0MatchDistraImage.Text;
-              
-                string matchSerializeJSON = JsonConvert.SerializeObject(match);
-             //   MessageBox.Show(matchSerializeJSON);
-
-                }
-            if(!this.tabcontrol0ChoiceQuestionType.Text.Equals("不存在"))
-            {
-                choice.ExciseName = this.tabcontrol0ChoiceExciseName.Text;
-                choice.QuestionType = this.tabcontrol0ChoiceQuestionType.Text;
-                choice.Speech = this.tabcontrol0ChoiceSound.Text;
-                choice.Answer = new ImageItem();
-                choice.Answer.Image = this.tabcontrol0ChoiceRightImage.Text;
-                choice.Answer.Text = this.tabcontrol0ChoiceRightText.Text;
-                choice.Distractor = new ImageItem();
-                choice.Distractor.Image = this.tabcontrol0ChoiceDistraImage.Text;
-                choice.Distractor.Text = this.tabcontrol0ChoiceRightText.Text;
-  
-                string choiceSerializeJSON = JsonConvert.SerializeObject(choice);
-            //    MessageBox.Show(choiceSerializeJSON);
-                
-            }
-            if (!this.tabcontrol0PuzzleQuestionType.Text.Equals("不存在"))
-            {
-                puzzle.ExciseName = this.tabcontrol0PuzzleExciseName.Text;
-                puzzle.Speech = this.tabcontrol0PuzzleSound.Text;
-                puzzle.QuestionType = this.tabcontrol0PuzzleQuestionType.Text;
-                puzzle.PuzzleImage = new ImageItem();
-                puzzle.PuzzleImage.Image = this.tabcontrol0PuzzleRightImage.Text;
-                puzzle.Distractor = new ImageItem();
-                puzzle.Distractor.Image = this.tabcontrol0PuzzleDistraImage.Text;
-               
-             
-                string puzzleSerializeJSON = JsonConvert.SerializeObject(puzzle);
-               // MessageBox.Show(puzzleSerializeJSON);
-            
-            }
-
-            trail.Choices.Add(choice);
-            trail.Learnings.Add(learning);
-            trail.Matchs.Add(match);
-            trail.Puzzles.Add(puzzle);
-            trail.Judges.Add(judgment);
-            string lessonname = this.lessonName.Text;
-            string trailname = this.trailName.Text;
-            string trailChineseName = this.trailChineseName.Text;
-
-       
-
-            string trailSerializeJSON = JsonConvert.SerializeObject(trail);
-            Console.WriteLine(trailSerializeJSON);
-            string sql = "insert into lessontrail (lessonName, trialName,chineseName,jsondata) values ('"+lessonname+"','"+ trailname+"','"+trailChineseName+"',"+"'"+trailSerializeJSON+"'"+")";
-            dbhelper.RunSQL(sql);
-            MessageBox.Show(trailSerializeJSON);
-
-
-        }
 
         private string[] getFile(string images)
         {
@@ -282,6 +175,11 @@ namespace teachJson
 
         private void button142_Click(object sender, EventArgs e)
         {
+
+            save();
+        }
+        private void save()
+        {
             Trail trail = new Trail();
 
             addTabcontrol0(trail);
@@ -299,13 +197,23 @@ namespace teachJson
             addTabcontrol12(trail);
             addTabcontrol13(trail);
             string lessonname = this.lessonName.Text;
-            string trailname = this.trailName.Text;
+     
             string trailChineseName = this.trailChineseName.Text;
             string trailSerializeJSON = JsonConvert.SerializeObject(trail);
-            Console.WriteLine(trailSerializeJSON);
-            string sql = "insert into lessontrail (lessonName, trialName,chineseName,jsondata) values ('" + lessonname + "','" + trailname + "','" + trailChineseName + "'," + "'" + trailSerializeJSON + "'" + ")";
-            dbhelper.RunSQL(sql);
-            MessageBox.Show(trailSerializeJSON);
+            //Console.WriteLine(trailSerializeJSON);
+            int count = dbhelper.GetLessonTrailCount(lessonname, trailChineseName);
+            if (count > 0)
+            {
+                MessageBox.Show("已存在该课程的训练！");
+                return;
+            }
+            else
+            {
+                string sql = "insert into lessontrail (lessonName, trialName,chineseName,jsondata) values ('" + lessonname + "','" + "" + "','" + trailChineseName + "'," + "'" + trailSerializeJSON + "'" + ")";
+                dbhelper.RunSQL(sql);
+            }
+              
+        
         }
         private void addTabcontrol0(Trail trail)
         {
@@ -318,14 +226,15 @@ namespace teachJson
             if (!this.tabcontrol0learnQuestionType.Text.Equals("不存在"))
             {
                 learning.ExciseName = this.tabcontrol0LearnExciseName.Text;
-                learning.QuestionType = "learning";
+                learning.QuestionType = this.tabcontrol0learnQuestionType.Text.Trim();
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol0LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol0learnSound.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
                 learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol0LearnPy.Text;
-                trail.Learnings.Add(learning);
+                trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -334,14 +243,15 @@ namespace teachJson
             {
                 judgment.ExciseName = this.tabcontrol0JudgeExciseName.Text;
                 judgment.Speech = this.tabcontro0JudgeSound.Text;
-                judgment.QuestionType = "judge";
+                judgment.QuestionType = this.tabcontrol0JudgeQuestionType.Text;
                 judgment.Question = new ImageItem();
 
                 judgment.Question.Image = this.tabcontrol0JudgeRightImage.Text;
 
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol0JudgeWrongImage.Text;
-                trail.Judges.Add(judgment);
+                trail.Questions.Add(judgment);
+              
                 //  MessageBox.Show(judgeSerializeJSON);
 
             }
@@ -356,7 +266,8 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol0MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol0MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
+                
 
             }
             else if (!this.tabcontrol0ChoiceQuestionType.Text.Equals("不存在"))
@@ -369,9 +280,9 @@ namespace teachJson
                 choice.Answer.SpeechText = this.tabcontrol0ChoiceRightText.Text;
                 choice.Distractor = new ImageItem();
                 choice.Distractor.Image = this.tabcontrol0ChoiceDistraImage.Text;
-                choice.Distractor.SpeechText = this.tabcontrol0ChoiceRightText.Text;
-
-                trail.Choices.Add(choice);
+                choice.Distractor.SpeechText = this.tabcontrol0ChoiceDistraText.Text;
+                trail.Questions.Add(choice);
+                
                 //    MessageBox.Show(choiceSerializeJSON);
 
             }
@@ -385,8 +296,8 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol0PuzzleDistraImage.Text;
 
-
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
+             
                 // MessageBox.Show(puzzleSerializeJSON);
 
             }
@@ -408,11 +319,13 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol1learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol1LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol1learnSound.Text;
-                learning.Question.Text = this.tabcontrl1LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol1LearnPy.Text;
-                trail.Learnings.Add(learning);
+             
+                trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -429,7 +342,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol1JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -446,7 +359,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol1MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol1MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -463,13 +376,14 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol1ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol1ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
                 
 
             }
             else if (!this.tabcontrol1PuzzleQuestionType.Text.Equals("不存在"))
             {
                 puzzle.ExciseName = this.tabcontrol1PuzzleExciseName.Text;
+
                 puzzle.Speech = this.tabcontrol1PuzzleSound.Text;
                 puzzle.QuestionType = this.tabcontrol1PuzzleQuestionType.Text;
                 puzzle.PuzzleImage = new ImageItem();
@@ -477,7 +391,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol1PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -499,11 +413,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol2learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol2LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol2learnSound.Text;
-                learning.Question.Text = this.tabcontrl2LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol2LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -520,7 +435,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol2JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -537,7 +452,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol2MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol2MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -554,7 +469,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol2ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol2ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -568,7 +483,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol2PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -590,11 +505,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol3learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol3LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol3learnSound.Text;
-                learning.Question.Text = this.tabcontrl3LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol3LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -611,7 +527,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol3JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -628,7 +544,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol3MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol3MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -645,7 +561,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol3ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol3ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -659,7 +575,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol3PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -680,11 +596,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol4learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol4LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol4learnSound.Text;
-                learning.Question.Text = this.tabcontrl3LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol4LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -701,7 +618,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol4JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -718,7 +635,8 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol4MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol4MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
+            
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -735,7 +653,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol4ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol4ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -749,7 +667,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol4PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -770,11 +688,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol5learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol5LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol5learnSound.Text;
-                learning.Question.Text = this.tabcontrl5LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol5LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -791,7 +710,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol5JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -808,7 +727,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol5MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol5MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -825,7 +744,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol5ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol5ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -839,7 +758,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol5PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -860,11 +779,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol6learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol6LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol6learnSound.Text;
-                learning.Question.Text = this.tabcontrl6LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol6LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -881,7 +801,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol6JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -898,7 +818,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol6MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol6MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -915,7 +835,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol6ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol6ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -929,7 +849,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol6PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -950,11 +870,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol7learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol7LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol7learnSound.Text;
-                learning.Question.Text = this.tabcontrl7LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol7LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -971,7 +892,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol7JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -988,7 +909,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol7MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol7MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -1005,7 +926,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol7ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol7ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -1019,7 +940,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol7PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -1041,11 +962,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol8learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol8LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol8learnSound.Text;
-                learning.Question.Text = this.tabcontrl8LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol8LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -1062,7 +984,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol8JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -1079,7 +1001,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol8MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol8MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -1096,7 +1018,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol8ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol8ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -1110,7 +1032,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol8PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -1131,11 +1053,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol9learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol9LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol9learnSound.Text;
-                learning.Question.Text = this.tabcontrl9LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol9LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -1152,7 +1075,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol9JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -1169,7 +1092,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol9MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol9MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -1186,7 +1109,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol9ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol9ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -1200,7 +1123,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol9PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -1222,11 +1145,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol10learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol10LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol10learnSound.Text;
-                learning.Question.Text = this.tabcontrl10LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol10LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -1243,7 +1167,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol10JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -1260,7 +1184,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol10MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol10MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -1277,7 +1201,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol10ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol10ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -1291,7 +1215,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol10PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -1313,11 +1237,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol11learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol11LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol11learnSound.Text;
-                learning.Question.Text = this.tabcontrl11LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol11LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -1334,7 +1259,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol11JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -1351,7 +1276,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol11MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol11MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -1368,7 +1293,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol11ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol11ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -1382,7 +1307,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol11PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -1404,11 +1329,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol12learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol12LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol12learnSound.Text;
-                learning.Question.Text = this.tabcontrl12LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol12LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -1425,7 +1351,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol12JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -1442,7 +1368,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol12MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol12MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -1459,7 +1385,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol12ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol12ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -1473,7 +1399,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol12PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -1495,11 +1421,12 @@ namespace teachJson
                 learning.QuestionType = this.tabcontrol13learnQuestionType.Text;
                 learning.Question = new ImageItem();
                 learning.Question.Image = this.tabcontrol13LearnImage.Text;
-                learning.Question.SpeechText = this.tabcontrol13learnSound.Text;
-                learning.Question.Text = this.tabcontrl13LearnKeyText.Text;
+                learning.Speech = this.tabcontrol0learnSound.Text;
+                learning.Question.SpeechText = this.tabcontr0LearnKeyText.Text;
+                learning.Question.Text = this.tabcontr0LearnKeyText.Text;
 
                 learning.PinYing = this.tabcontrol13LearnPy.Text;
-                trail.Learnings.Add(learning);
+                 trail.Questions.Add(learning);
                 // MessageBox.Show(strSerializeJSON);
 
 
@@ -1516,7 +1443,7 @@ namespace teachJson
                 judgment.Distractor = new ImageItem();
                 judgment.Distractor.Image = this.tabcontrol13JudgeWrongImage.Text;
 
-                trail.Judges.Add(judgment);
+                 trail.Questions.Add(judgment);
 
 
                 //  MessageBox.Show(judgeSerializeJSON);
@@ -1533,7 +1460,7 @@ namespace teachJson
                 match.Answer.Image = this.tabcontrol13MatchAnswerImage.Text;
                 match.Distractor = new ImageItem();
                 match.Distractor.Image = this.tabcontrol13MatchDistraImage.Text;
-                trail.Matchs.Add(match);
+                trail.Questions.Add(match);
 
                 //   MessageBox.Show(matchSerializeJSON);
 
@@ -1550,7 +1477,7 @@ namespace teachJson
                 choice.Distractor.Image = this.tabcontrol13ChoiceDistraImage.Text;
                 choice.Distractor.SpeechText = this.tabcontrol13ChoiceDistraText.Text;
 
-                trail.Choices.Add(choice);
+               trail.Questions.Add(choice);
 
 
             }
@@ -1564,7 +1491,7 @@ namespace teachJson
                 puzzle.Distractor = new ImageItem();
                 puzzle.Distractor.Image = this.tabcontrol13PuzzleDistraImage.Text;
 
-                trail.Puzzles.Add(puzzle);
+                trail.Questions.Add(puzzle);
 
                 // MessageBox.Show(puzzleSerializeJSON);
 
@@ -2772,6 +2699,845 @@ namespace teachJson
 
         }
 
+        private void button143_Click(object sender, EventArgs e)
+        {
+
+            delete();
+            save();
+        }
+
+        private void button144_Click(object sender, EventArgs e)
+        {
+
+            delete();
+        }
+        private void delete()
+        {
+            string lesson = this.lessonName.Text.Trim();
+
+            string trailChinese = this.trailChineseName.Text.Trim();
+            string sql = "delete from lessontrail where lessonName = " + "'" + lesson + "'" + " and chineseName = " + "'" + trailChinese + "'";
+            int count = dbhelper.RunSQL(sql);
+            if (count > 0)
+                MessageBox.Show("删除成功！");
+            else
+                MessageBox.Show("删除失败！");
+        }
+
+        private void button145_Click(object sender, EventArgs e)
+        {
+            string lesson = this.lessonName.Text.Trim();
+
+            string trailChinese = this.trailChineseName.Text.Trim();
+            string sql = "select jsondata  from lessontrail where lessonName = " + "'" + lesson + "'" + " and chineseName = " + "'" + trailChinese + "'";
+            string jsondata = dbhelper.RunSelectSQL(sql);
+            query(jsondata);
+            Console.WriteLine(jsondata);
+
+
+
+        }
+        private void query(string jsonstring)
+        {
+            JObject jo = JObject.Parse(jsonstring);
+            string jstring = jo["Questions"].ToString();
+            JArray jarray = (JArray)JsonConvert.DeserializeObject(jstring);
+            if (jarray != null)
+            {
+                int i = 0;
+                foreach (JObject jobject in jarray)
+                {
+                    
+                    Learning learning;
+                    Judgment judge;
+                    Match match;
+                    Puzzle puzzle;
+                    Choice choice;
+                    string questionType = jobject["QuestionType"].ToString();
+                    if (questionType.Equals("教授") || questionType.Equals("一对一点击") || questionType.Equals("同义词"))
+                    {
+                        learning = JsonConvert.DeserializeObject<Learning>(jobject.ToString());
+                        showLearning(i,learning);
+                        
+                    }
+                    else if (questionType.Equals("匹配3选1") || questionType.Equals("匹配2选1") || questionType.Equals("匹配1选1"))
+                    {
+                        match = JsonConvert.DeserializeObject<Match>(jobject.ToString());
+                        showMatch(i, match);
+                    }
+                    else if (questionType.Equals("判断"))
+                    {
+                        judge = JsonConvert.DeserializeObject<Judgment>(jobject.ToString());
+                        showJudge(i, judge);
+                    }
+
+                    else if (questionType.Equals("选择3选1") || questionType.Equals("选择2选1"))
+                    {
+                        choice = JsonConvert.DeserializeObject<Choice>(jobject.ToString());
+                        showChoice(i,choice);
+
+                    }
+                    else if (questionType.Equals("拼图"))
+                    {
+                        puzzle = JsonConvert.DeserializeObject<Puzzle>(jobject.ToString());
+                        showPuzzle(i,puzzle);
+                    }
+
+                    i++;
+                }
+            }
+           
+
+         
+          
+        
+        }
+
+        private void showLearning(int i,Learning learning)
+        {
+            switch(i)
+            {
+                case 0:
+                    this.tabControl0.SelectedIndex = 0;
+                    this.tabcontrol0LearnExciseName.Text = learning.ExciseName;
+                     
+                       this.tabcontrol0learnQuestionType.Text=  learning.QuestionType ;
+                        
+                        this.tabcontrol0LearnImage.Text=learning.Question.Image ;
+                        this.tabcontrol0learnSound.Text=learning.Speech  ;
+                        this.tabcontr0LearnKeyText.Text=learning.Question.SpeechText ;
+                        this.tabcontr0LearnKeyText.Text=learning.Question.Text  ;
+
+                       this.tabcontrol0LearnPy.Text= learning.PinYing ;
+                    
+                    break;
+                case 1:
+                       this.tabControl1.SelectedIndex = 0;
+                    this.tabcontrol1LearnExciseName.Text = learning.ExciseName;
+                     
+                       this.tabcontrol1learnQuestionType.Text=  learning.QuestionType ;
+                        
+                        this.tabcontrol1LearnImage.Text=learning.Question.Image ;
+                        this.tabcontrol1learnSound.Text=learning.Speech  ;
+                        this.tabcontrl1LearnKeyText.Text=learning.Question.SpeechText ;
+                        this.tabcontrl1LearnKeyText.Text=learning.Question.Text  ;
+
+                       this.tabcontrol1LearnPy.Text= learning.PinYing ;
+                    break;
+                case 2:
+                    this.tabControl2.SelectedIndex = 0;
+                    this.tabcontrol2LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol2learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol2LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol2learnSound.Text = learning.Speech;
+                    this.tabcontrl2LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl2LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol2LearnPy.Text = learning.PinYing;
+                    break;
+                case 3:
+                    this.tabControl3.SelectedIndex = 0;
+                    this.tabcontrol3LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol3learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol3LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol3learnSound.Text = learning.Speech;
+                    this.tabcontrl3LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl3LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol3LearnPy.Text = learning.PinYing;
+                    break;
+                case 4:
+                    this.tabControl4.SelectedIndex = 0;
+                    this.tabcontrol4LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol4learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol4LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol4learnSound.Text = learning.Speech;
+                    this.tabcontrl4LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl4LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol4LearnPy.Text = learning.PinYing;
+                    break;
+                case 5:
+                    this.tabControl5.SelectedIndex = 0;
+                    this.tabcontrol5LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol5learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol5LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol5learnSound.Text = learning.Speech;
+                    this.tabcontrl5LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl5LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol5LearnPy.Text = learning.PinYing;
+                    break;
+                case 6:
+                    this.tabControl6.SelectedIndex = 0;
+                    this.tabcontrol6LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol6learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol6LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol6learnSound.Text = learning.Speech;
+                    this.tabcontrl6LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl6LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol6LearnPy.Text = learning.PinYing;
+                    break;
+                case 7:
+                    this.tabControl7.SelectedIndex = 0;
+                    this.tabcontrol7LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol7learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol7LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol7learnSound.Text = learning.Speech;
+                    this.tabcontrl7LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl7LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol7LearnPy.Text = learning.PinYing;
+                    break;
+                    
+                case 8:
+                    this.tabControl8.SelectedIndex = 0;
+                    this.tabcontrol8LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol8learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol8LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol8learnSound.Text = learning.Speech;
+                    this.tabcontrl8LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl8LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol8LearnPy.Text = learning.PinYing;
+                    break;
+                case 9:
+                    this.tabControl9.SelectedIndex = 0;
+                    this.tabcontrol9LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol9learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol9LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol9learnSound.Text = learning.Speech;
+                    this.tabcontrl9LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl9LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol9LearnPy.Text = learning.PinYing;
+                    break;
+                case 10:
+                    this.tabControl10.SelectedIndex = 0;
+                    this.tabcontrol10LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol10learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol10LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol10learnSound.Text = learning.Speech;
+                    this.tabcontrl10LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl10LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol10LearnPy.Text = learning.PinYing;
+                    break;
+                case 11:
+                    this.tabControl11.SelectedIndex = 0;
+                    this.tabcontrol11LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol11learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol11LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol11learnSound.Text = learning.Speech;
+                    this.tabcontrl11LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl11LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol11LearnPy.Text = learning.PinYing;
+                    break;
+                case 12:
+                    this.tabControl12.SelectedIndex = 0;
+                    this.tabcontrol12LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol12learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol12LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol12learnSound.Text = learning.Speech;
+                    this.tabcontrl12LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl12LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol12LearnPy.Text = learning.PinYing;
+                  
+                    break;
+                case 13:
+                    this.tabControl13.SelectedIndex = 0;
+                    this.tabcontrol13LearnExciseName.Text = learning.ExciseName;
+
+                    this.tabcontrol13learnQuestionType.Text = learning.QuestionType;
+
+                    this.tabcontrol13LearnImage.Text = learning.Question.Image;
+                    this.tabcontrol13learnSound.Text = learning.Speech;
+                    this.tabcontrl13LearnKeyText.Text = learning.Question.SpeechText;
+                    this.tabcontrl13LearnKeyText.Text = learning.Question.Text;
+
+                    this.tabcontrol13LearnPy.Text = learning.PinYing;
+                    break;
+
+            }
+        
+        }
+
+        private void showMatch(int i, Match match)
+        {
+            switch (i)
+            {
+                case 0:
+                    this.tabControl0.SelectedIndex = 2;
+                    this.tabcontrol0MatchExciseName.Text=match.ExciseName ;
+                    this.tabcontrol0MatchQuestionType.Text=match.QuestionType ;
+                    this.tabcontrol0MatchQuestionImage.Text=match.Question.Image ;
+                    this.tabcontrol0MatchAnswerImage.Text=match.Answer.Image ;
+                 
+                    this.tabcontrol0MatchDistraImage.Text=match.Distractor.Image  ;
+                    this.tabcontrol0MatchSound.Text = match.Speech;
+                
+
+                    break;
+                case 1:
+                 this.tabControl1.SelectedIndex = 2;
+                 this.tabcontrol1MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol1MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol1MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol1MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol1MatchSound.Text = match.Speech;
+                 this.tabcontrol1MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 2:
+                       this.tabControl2.SelectedIndex = 2;
+                 this.tabcontrol2MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol2MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol2MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol2MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol2MatchSound.Text = match.Speech;
+                 this.tabcontrol2MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 3:
+                        this.tabControl3.SelectedIndex = 2;
+                 this.tabcontrol3MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol3MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol3MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol3MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol3MatchSound.Text = match.Speech;
+                 this.tabcontrol3MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 4:
+                     this.tabControl4.SelectedIndex = 2;
+                 this.tabcontrol4MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol4MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol4MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol4MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol4MatchSound.Text = match.Speech;
+                 this.tabcontrol4MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 5:
+                      this.tabControl5.SelectedIndex = 2;
+                 this.tabcontrol5MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol5MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol5MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol5MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol5MatchSound.Text = match.Speech;
+                 this.tabcontrol5MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 6:
+                   this.tabControl6.SelectedIndex = 2;
+                 this.tabcontrol6MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol6MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol6MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol6MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol6MatchSound.Text = match.Speech;
+                 this.tabcontrol6MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 7:
+                   this.tabControl7.SelectedIndex = 2;
+                 this.tabcontrol7MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol7MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol7MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol7MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol7MatchSound.Text = match.Speech;
+                 this.tabcontrol7MatchDistraImage.Text = match.Distractor.Image;
+                   
+                    break;
+                case 8:
+                   this.tabControl8.SelectedIndex = 2;
+                 this.tabcontrol8MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol8MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol8MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol8MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol8MatchSound.Text = match.Speech;
+                 this.tabcontrol8MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 9:
+                     this.tabControl9.SelectedIndex = 2;
+                 this.tabcontrol9MatchExciseName.Text = match.ExciseName;
+                 this.tabcontrol9MatchQuestionType.Text = match.QuestionType;
+                 this.tabcontrol9MatchQuestionImage.Text = match.Question.Image;
+                 this.tabcontrol9MatchAnswerImage.Text = match.Answer.Image;
+                 this.tabcontrol9MatchSound.Text = match.Speech;
+                 this.tabcontrol9MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 10:
+                    this.tabControl10.SelectedIndex = 2;
+                    this.tabcontrol10MatchExciseName.Text = match.ExciseName;
+                    this.tabcontrol10MatchQuestionType.Text = match.QuestionType;
+                    this.tabcontrol10MatchQuestionImage.Text = match.Question.Image;
+                    this.tabcontrol10MatchAnswerImage.Text = match.Answer.Image;
+                    this.tabcontrol10MatchSound.Text = match.Speech;
+                    this.tabcontrol10MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 11:
+                    this.tabControl11.SelectedIndex = 2;
+                    this.tabcontrol11MatchExciseName.Text = match.ExciseName;
+                    this.tabcontrol11MatchQuestionType.Text = match.QuestionType;
+                    this.tabcontrol11MatchQuestionImage.Text = match.Question.Image;
+                    this.tabcontrol11MatchAnswerImage.Text = match.Answer.Image;
+                    this.tabcontrol1MatchSound.Text = match.Speech;
+                    this.tabcontrol11MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+                case 12:
+                    this.tabControl12.SelectedIndex = 2;
+                    this.tabcontrol12MatchExciseName.Text = match.ExciseName;
+                    this.tabcontrol12MatchQuestionType.Text = match.QuestionType;
+                    this.tabcontrol12MatchQuestionImage.Text = match.Question.Image;
+                    this.tabcontrol12MatchAnswerImage.Text = match.Answer.Image;
+                    this.tabcontrol2MatchSound.Text = match.Speech;
+                    this.tabcontrol12MatchDistraImage.Text = match.Distractor.Image;
+
+                    break;
+                case 13:
+                    this.tabControl13.SelectedIndex = 2;
+                    this.tabcontrol13MatchExciseName.Text = match.ExciseName;
+                    this.tabcontrol13MatchQuestionType.Text = match.QuestionType;
+                    this.tabcontrol13MatchQuestionImage.Text = match.Question.Image;
+                    this.tabcontrol13MatchAnswerImage.Text = match.Answer.Image;
+                    this.tabcontrol3MatchSound.Text = match.Speech;
+                    this.tabcontrol13MatchDistraImage.Text = match.Distractor.Image;
+                    break;
+
+            }
+
+        }
+
+        private void showJudge(int i, Judgment judgment)
+        {
+            switch (i)
+            {
+                case 0:
+                    this.tabControl0.SelectedIndex = 1;
+                    this.tabcontrol0JudgeExciseName.Text=judgment.ExciseName ;
+                    this.tabcontro0JudgeSound.Text= judgment.Speech ;
+                    this.tabcontrol0JudgeQuestionType.Text =judgment.QuestionType ;
+                    this.tabcontrol0JudgeRightImage.Text=judgment.Question.Image  ;
+                    this.tabcontrol0JudgeWrongImage.Text=judgment.Distractor.Image;
+                    break;
+                case 1:
+                    this.tabControl1.SelectedIndex = 1;
+                    this.tabcontrol1JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol1JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol1JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol1JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol1JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 2:
+                    this.tabControl2.SelectedIndex = 1;
+                    this.tabcontrol2JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol2JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol2JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol2JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol2JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 3:
+                    this.tabControl3.SelectedIndex = 1;
+                    this.tabcontrol3JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol3JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol3JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol3JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol3JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 4:
+                    this.tabControl4.SelectedIndex = 1;
+                    this.tabcontrol4JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol4JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol4JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol4JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol4JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 5:
+                    this.tabControl5.SelectedIndex = 1;
+                    this.tabcontrol5JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol5JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol5JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol5JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol5JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 6:
+                    this.tabControl6.SelectedIndex = 1;
+                    this.tabcontrol6JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol6JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol6JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol6JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol6JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 7:
+                    this.tabControl7.SelectedIndex = 1;
+                    this.tabcontrol7JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol7JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol7JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol7JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol7JudgeWrongImage.Text = judgment.Distractor.Image;
+
+                    break;
+                case 8:
+                    this.tabControl8.SelectedIndex = 1;
+                    this.tabcontrol8JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol8JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol8JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol8JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol8JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 9:
+                    this.tabControl9.SelectedIndex = 1;
+                    this.tabcontrol9JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol9JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol9JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol9JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol9JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 10:
+                    this.tabControl10.SelectedIndex = 1;
+                    this.tabcontrol10JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol10JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol10JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol10JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol10JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 11:
+                    this.tabControl11.SelectedIndex = 1;
+                    this.tabcontrol11JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol11JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol11JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol11JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol11JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+                case 12:
+                    this.tabControl12.SelectedIndex = 1;
+                    this.tabcontrol12JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol12JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol12JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol12JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol12JudgeWrongImage.Text = judgment.Distractor.Image;
+
+                    break;
+                case 13:
+                    this.tabControl13.SelectedIndex = 1;
+                    this.tabcontrol13JudgeExciseName.Text = judgment.ExciseName;
+                    this.tabcontrol13JudgeSound.Text = judgment.Speech;
+                    this.tabcontrol13JudgeQuestionType.Text = judgment.QuestionType;
+                    this.tabcontrol13JudgeRightImage.Text = judgment.Question.Image;
+                    this.tabcontrol13JudgeWrongImage.Text = judgment.Distractor.Image;
+                    break;
+
+            }
+
+        }
+
+        private void showChoice(int i, Choice choice)
+        {
+            switch (i)
+            {
+                case 0:
+                    this.tabControl0.SelectedIndex =3;
+                    this.tabcontrol0ChoiceExciseName.Text= choice.ExciseName;
+                    this.tabcontrol0ChoiceQuestionType.Text=choice.QuestionType  ;
+                    this.tabcontrol0ChoiceSound.Text=choice.Speech ;
+                    this.tabcontrol0ChoiceRightImage.Text=choice.Answer.Image ;
+                    this.tabcontrol0ChoiceRightText.Text=choice.Answer.SpeechText ;
+                    this.tabcontrol0ChoiceDistraImage.Text=choice.Distractor.Image;
+                    this.tabcontrol0ChoiceDistraText.Text=choice.Distractor.SpeechText;
+
+                    break;
+                case 1:
+                    this.tabControl1.SelectedIndex =3;
+                    this.tabcontrol1ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol1ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol1ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol1ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol1ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol1ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol1ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 2:
+                    this.tabControl2.SelectedIndex = 3;
+                    this.tabcontrol2ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol2ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol2ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol2ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol2ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol2ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol2ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 3:
+                    this.tabControl3.SelectedIndex = 3;
+                    this.tabcontrol3ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol3ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol3ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol3ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol3ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol3ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol3ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 4:
+                    this.tabControl4.SelectedIndex = 3;
+                    this.tabcontrol4ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol4ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol4ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol4ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol4ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol4ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol4ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 5:
+                    this.tabControl5.SelectedIndex = 3;
+                    this.tabcontrol5ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol5ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol5ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol5ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol5ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol5ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol5ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 6:
+                    this.tabControl6.SelectedIndex = 3;
+                    this.tabcontrol6ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol6ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol6ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol6ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol6ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol6ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol6ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 7:
+                    this.tabControl7.SelectedIndex = 3;
+                    this.tabcontrol7ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol7ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol7ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol7ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol7ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol7ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol7ChoiceDistraText.Text = choice.Distractor.SpeechText;
+
+                    break;
+                case 8:
+                    this.tabControl8.SelectedIndex = 3;
+                    this.tabcontrol8ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol8ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol8ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol8ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol8ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol8ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol8ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 9:
+                    this.tabControl9.SelectedIndex = 3;
+                    this.tabcontrol9ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol9ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol9ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol9ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol9ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol9ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol9ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 10:
+                    this.tabControl10.SelectedIndex = 3;
+                    this.tabcontrol10ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol10ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol10ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol10ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol10ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol10ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol10ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 11:
+                    this.tabControl11.SelectedIndex = 3;
+                    this.tabcontrol11ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol11ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol11ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol11ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol11ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol11ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol11ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+                case 12:
+                    this.tabControl12.SelectedIndex = 3;
+                    this.tabcontrol12ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol12ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol12ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol12ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol12ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol12ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol12ChoiceDistraText.Text = choice.Distractor.SpeechText;
+
+                    break;
+                case 13:
+                    this.tabControl13.SelectedIndex = 3;
+                    this.tabcontrol13ChoiceExciseName.Text = choice.ExciseName;
+                    this.tabcontrol13ChoiceQuestionType.Text = choice.QuestionType;
+                    this.tabcontrol13ChoiceSound.Text = choice.Speech;
+                    this.tabcontrol13ChoiceRightImage.Text = choice.Answer.Image;
+                    this.tabcontrol13ChoiceRightText.Text = choice.Answer.SpeechText;
+                    this.tabcontrol13ChoiceDistraImage.Text = choice.Distractor.Image;
+                    this.tabcontrol3ChoiceDistraText.Text = choice.Distractor.SpeechText;
+                    break;
+
+            }
+
+        }
+
+        private void showPuzzle(int i, Puzzle puzzle)
+        {
+            switch (i)
+            {
+                case 0:
+                    this.tabControl0.SelectedIndex = 4;
+                    this.tabcontrol0PuzzleExciseName.Text= puzzle.ExciseName ;
+                    this.tabcontrol0PuzzleSound.Text=puzzle.Speech ;
+                    this.tabcontrol0PuzzleQuestionType.Text =puzzle.QuestionType ;
+                    this.tabcontrol0PuzzleRightImage.Text=puzzle.PuzzleImage.Image ;
+                    this.tabcontrol0PuzzleDistraImage.Text= puzzle.Distractor.Image  ;
+                    break;
+                case 1:
+                    this.tabControl1.SelectedIndex = 4;
+                    this.tabcontrol1PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol1PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol1PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol1PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol1PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 2:
+                    this.tabControl2.SelectedIndex = 4;
+                    this.tabcontrol2PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol2PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol2PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol2PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol2PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 3:
+                    this.tabControl3.SelectedIndex = 4;
+                    this.tabcontrol3PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol3PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol3PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol3PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol3PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 4:
+                    this.tabControl4.SelectedIndex = 4;
+                    this.tabcontrol4PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol4PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol4PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol4PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol4PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 5:
+                    this.tabControl5.SelectedIndex = 4;
+                    this.tabcontrol5PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol5PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol5PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol5PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol5PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 6:
+                    this.tabControl6.SelectedIndex = 4;
+                    this.tabcontrol6PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol6PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol6PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol6PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol6PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 7:
+                    this.tabControl7.SelectedIndex = 4;
+                    this.tabcontrol7PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol7PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol7PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol7PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol7PuzzleDistraImage.Text = puzzle.Distractor.Image;
+
+                    break;
+                case 8:
+                    this.tabControl8.SelectedIndex = 4;
+                    this.tabcontrol8PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol8PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol8PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol8PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol8PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 9:
+                    this.tabControl9.SelectedIndex = 4;
+                    this.tabcontrol9PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol9PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol9PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol9PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol9PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 10:
+                    this.tabControl10.SelectedIndex = 4;
+                    this.tabcontrol10PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol10PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol10PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol10PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol10PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 11:
+                    this.tabControl11.SelectedIndex = 4;
+                    this.tabcontrol11PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol11PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol11PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol11PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol11PuzzleDistraImage.Text = puzzle.Distractor.Image;
+                    break;
+                case 12:
+                    this.tabControl12.SelectedIndex = 4;
+                    this.tabcontrol12PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol12PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol12PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol12PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol12PuzzleDistraImage.Text = puzzle.Distractor.Image;
+
+                    break;
+                case 13:
+                    this.tabControl13.SelectedIndex = 4;
+                    this.tabcontrol13PuzzleExciseName.Text = puzzle.ExciseName;
+                    this.tabcontrol13PuzzleSound.Text = puzzle.Speech;
+                    this.tabcontrol13PuzzleQuestionType.Text = puzzle.QuestionType;
+                    this.tabcontrol13PuzzleRightImage.Text = puzzle.PuzzleImage.Image;
+                    this.tabcontrol13PuzzleDistraImage.Text = puzzle.Distractor.Image;
+
+                    break;
+
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in panel.Controls)//或为groupBox1.Controls/panel1.Controls
+            {
+                if (ctrl is TextBox)
+                    ctrl.Text = "";
+                if (ctrl is ComboBox)
+                    ctrl.Text = "";
+            }
+
+
+        }
 
         
     }

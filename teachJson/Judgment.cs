@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace teachJson
 {
-    public class Judgment
+    public class Judgment : Base
     {
         private String questionType;
         private String exciseName;

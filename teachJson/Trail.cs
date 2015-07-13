@@ -10,60 +10,18 @@ namespace teachJson
     {
         public Trail()
         {
-            learnings = new List<Learning>();
-            judges = new List<Judgment>();
-            matchs = new List<Match>();
-            choices = new List<Choice>();
-            puzzles = new List<Puzzle>();
-            draws = new List<Draw>();
+            questions = new List<Base>();
          }
-        private List<Learning> learnings;
+        private List<Base> questions;
 
-        public List<Learning> Learnings
+        public List<Base> Questions
         {
-            get { return learnings; }
-            set { learnings = value; }
-        }
-        private List<Judgment> judges;
-
-        public List<Judgment> Judges
-        {
-            get { return judges; }
-            set { judges = value; }
+            get { return questions; }
+            set { questions = value; }
         }
 
-
-        private List<Match> matchs;
-
-        public List<Match> Matchs
-        {
-            get { return matchs; }
-            set { matchs = value; }
-        }
-        private List<Choice> choices;
-
-        public List<Choice> Choices
-        {
-            get { return choices; }
-            set { choices = value; }
-        }
-        private List<Puzzle> puzzles;
-
-        public List<Puzzle> Puzzles
-        {
-            get { return puzzles; }
-            set { puzzles = value; }
-        }
-
-
-        private List<Draw> draws;
-
-        public List<Draw> Draws
-        {
-            get { return draws; }
-            set { draws = value; }
-        }
-
+      
+       
 
     }
 }

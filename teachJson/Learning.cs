@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace teachJson
 {
-    public class Learning
+    public class Learning :Base
     {
 
         private String questionType;
         private String pinYing;
         private String exciseName;
         private ImageItem question;
+        private String speech;
+
+        public String Speech
+        {
+            get { return speech; }
+            set { speech = value; }
+        }
 
         public ImageItem Question
         {
